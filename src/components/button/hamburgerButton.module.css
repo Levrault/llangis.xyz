@@ -1,0 +1,6 @@
+.container {
+  background: yellow;
+  &-active {
+    background: red;
+  }
+}
