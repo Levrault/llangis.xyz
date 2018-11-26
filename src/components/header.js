@@ -1,13 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import styles from './header.module.css'
 
 const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
+  <div className={styles.container}>
     <div
       style={{
         margin: '0 auto',
