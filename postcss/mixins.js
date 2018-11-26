@@ -8,6 +8,9 @@ const mixins = {
     case 'xs':
       return { 'box-shadow': '0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);' };
       break;
+    case 'xl':
+      return { 'box-shadow': '0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);' };
+      break;
     default:
       return { 'box-shadow': '0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24);' };
     }

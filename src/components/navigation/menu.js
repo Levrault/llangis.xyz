@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import HamburgerButton from '../button/hamburgerButton';
+import IconButton from '../button/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 import styles from './menu.module.css';
 import NavigationMenu from './navigationMenu';
 
@@ -31,14 +32,16 @@ class Menu extends PureComponent {
 
   /**
   * Render
-  * @returns {nodek}
+  * @returns {node}
   */
   render () {
     const { isMenuOpen } = this.state;
     return (
       <div className={styles.container}>
-        <HamburgerButton onClick={this.toggleMenu} />
-        {isMenuOpen && <NavigationMenu />}
+        <IconButton className={styles.hamburger} onClick={this.toggleMenu}>
+          <MenuIcon />
+        </IconButton>
+        <NavigationMenu onClose={this.toggleMenu} active={isMenuOpen} />
       </div>
     );
   }

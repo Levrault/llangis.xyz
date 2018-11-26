@@ -1,0 +1,11 @@
+.container {
+  background: transparent;
+  border: 0;
+  color: $palette-dark;
+  cursor: pointer;
+  font-size: 1.5rem;
+
+  > svg {
+    font-size: 2rem;
+  }
+}

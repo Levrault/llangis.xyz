@@ -1,4 +1,7 @@
 .container {
-  background: rebeccapurple;
   margin-bottom: resolve($space-xl);
+}
+
+.hamburger {
+  margin: $space-s 0 0 $space-s;
 }

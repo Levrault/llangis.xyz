@@ -36,5 +36,5 @@ var postCSSConfig = [
 module.exports = () => ({
   plugins: [
     ...postCSSConfig
-  ],
-})
+  ]
+});

@@ -2,22 +2,30 @@ const postCSSConfig = require('./postcss.config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Gatsby Default Starter'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
-        ...postCSSConfig 
-      },
+        ...postCSSConfig
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Cutive Mono', 'Cutive']
+        }
+      }
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
@@ -30,11 +38,11 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
-      },
-    },
+        icon: 'src/images/gatsby-icon.png' // This path is relative to the root of the site.
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
-  ],
-}
+  ]
+};
