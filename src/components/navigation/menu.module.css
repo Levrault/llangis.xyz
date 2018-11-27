@@ -3,5 +3,14 @@
 }
 
 .hamburger {
-  margin: $space-s 0 0 $space-s;
+  left: $space-m;
+  opacity: .5;
+  position: fixed;
+  top: $space-m;
+  transition: .5s;
+  z-index: $foreground;
+
+  &:hover {
+    opacity: 1;
+  }
 }

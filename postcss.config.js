@@ -1,5 +1,3 @@
-const mixins = require('./postcss/mixins');
-
 var postCSSConfig = [
   /* reset inherited rules */
   require('postcss-initial')({
@@ -11,7 +9,7 @@ var postCSSConfig = [
   require('postcss-cssnext'),
   /* enable mixins like Sass/Less */
   require('postcss-mixins')({
-    mixins: mixins
+    mixins: require('./postcss/mixins')
   }),
   /* require global variables */
   require('postcss-simple-vars')({

@@ -4,6 +4,7 @@
   color: $palette-dark;
   cursor: pointer;
   font-size: 1.5rem;
+  outline: none;
 
   > svg {
     font-size: 2rem;

@@ -1,7 +1,7 @@
 // PostCSS is needed to make this work
-const postcss = require('postcss');
+// const postcss = require('postcss');
 
-const mixins = {
+module.exports = {
   // The first argument, mixin, is used to connect postCSS-mixins
   boxShadow (mixin, type) {
     switch (type) {
@@ -25,6 +25,16 @@ const mixins = {
       'padding': '0',
       'list-style': 'none'
     };
+  },
+
+  fixedFullscreen (mixin) {
+    return {
+      bottom: '0',
+      left: '0',
+      position: 'fixed',
+      right: '0',
+      top: '0'
+    };
   }
+
 };
-module.exports = mixins;
