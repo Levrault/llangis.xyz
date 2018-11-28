@@ -1,0 +1,16 @@
+.container {
+  margin-bottom: resolve($space-xl);
+}
+
+.hamburger {
+  left: $space-m;
+  opacity: .5;
+  position: fixed;
+  top: $space-m;
+  transition: .5s;
+  z-index: $foreground;
+
+  &:hover {
+    opacity: 1;
+  }
+}

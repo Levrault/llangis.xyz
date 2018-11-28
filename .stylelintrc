@@ -1,0 +1,16 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "ignoreFiles": [
+    "./src/**/*.js"
+  ],
+  "rules": {
+    "indentation": [2, { "severity": "error" } ],
+    "comment-no-empty": null,
+    "string-quotes": "single",
+    "max-nesting-depth": [3, { "severity": "warning", ignoreAtRules: ["each"] } ],
+    "number-leading-zero": "never",
+    "selector-class-pattern": null,
+    "selector-max-id": null,
+    "function-comma-space-after": null,
+  }
+}

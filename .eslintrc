@@ -1,0 +1,78 @@
+{
+  "parser": "babel-eslint",
+  "extends": "react",
+  "plugins": [],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "no-duplicate-imports": 0,
+    "react/jsx-filename-extension": 0,
+    "react/sort-comp": 0,
+    "global-require": 0,
+    "indent": ["error", 2],
+    "react/jsx-indent": 0,
+    "react/jsx-indent-props": ["error", 2],
+    "react/forbid-prop-types": [0, { "forbid": ["object"] }],
+    "import/no-extraneous-dependencies": 0,
+    "react/prop-types": [2, { "ignore": ["children"] }],
+    "react/no-danger": 0,
+    "require-jsdoc": [
+      "warn",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true,
+          "ArrowFunctionExpression": true
+        }
+      }
+    ],
+    "valid-jsdoc": [
+      "error",
+      {
+        "prefer": {
+          "return": "returns"
+        },
+        "preferType": {
+          "String": "string",
+          "Number": "number",
+          "Integer": "number",
+          "integer": "number",
+          "int": "number",
+          "float": "number",
+          "double": "number",
+          "short": "number",
+          "boolean": "bool",
+          "Boolean": "bool",
+          "Bool": "bool",
+          "Node": "node",
+          "Object": "object",
+          "Function": "function",
+          "func": "function",
+          "Array": "array"
+        },
+        "requireReturn": false,
+        "requireParamDescription": false,
+        "requireReturnDescription": false
+      }
+    ],
+
+  },
+  "globals": {
+    "afterEach": false,
+    "beforeEach": false,
+    "afterAll": false,
+    "beforeAll": false,
+    "graphql": false,
+    "describe": false,
+    "it": false,
+    "expect": false,
+    "assert": false,
+    "jest": false,
+    "browser": false,
+    "BASE_URL": false
+  }
+}

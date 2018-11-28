@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^3.5.1",
+    "@material-ui/icons": "^3.0.1",
     "gatsby": "^2.0.19",
     "gatsby-image": "^2.0.15",
     "gatsby-plugin-manifest": "^2.0.5",
@@ -11,12 +13,14 @@
     "gatsby-plugin-postcss": "^2.0.1",
     "gatsby-plugin-react-helmet": "^3.0.0",
     "gatsby-plugin-sharp": "^2.0.7",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-transformer-sharp": "^2.1.4",
     "postcss": "^7.0.6",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-transition-group": "^2.5.0"
   },
   "keywords": [
     "gatsby"
@@ -30,17 +34,27 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "classnames": "^2.2.6",
+    "eslint": "^5.9.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
     "postcss-color-function": "^4.0.1",
     "postcss-cssnext": "^3.1.0",
     "postcss-flexbugs-fixes": "^4.1.0",
     "postcss-import": "^12.0.1",
+    "postcss-initial": "^3.0.0",
     "postcss-loader": "^3.0.0",
     "postcss-math": "^0.0.10",
     "postcss-mixins": "^6.2.0",
     "postcss-nested": "^4.1.0",
     "postcss-preset-env": "^6.4.0",
     "postcss-simple-vars": "^5.0.1",
-    "prettier": "^1.14.2"
+    "prettier": "^1.14.2",
+    "stylelint": "^9.8.0",
+    "stylelint-config-sass-guidelines": "^5.2.0"
   },
   "repository": {
     "type": "git",
