@@ -8,6 +8,8 @@
     "node": true
   },
   "rules": {
+
+    "quotes": ["error", "single"],
     "no-duplicate-imports": 0,
     "react/jsx-filename-extension": 0,
     "react/sort-comp": 0,
@@ -58,8 +60,7 @@
         "requireParamDescription": false,
         "requireReturnDescription": false
       }
-    ],
-
+    ]
   },
   "globals": {
     "afterEach": false,
