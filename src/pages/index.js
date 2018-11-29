@@ -1,19 +1,46 @@
 import React from 'react';
-import { Link } from 'gatsby';
-
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import PostLink from "../components/link/post-link";
 import Layout from '../components/layout';
-import Image from '../components/image';
 
-const IndexPage = () => (
-  <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-);
+/**
+ * Index page
+ * @class Index
+ * @param {array} edges
+ */
+const Index = ({ data: { allMarkdownRemark: { edges } } }) => {
+  const posts = edges
+    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
 
-export default IndexPage;
+  return (
+    <Layout>
+      <div>{posts}</div>
+    </Layout>
+  );
+};
+
+Index.propTypes = {
+  data: PropTypes.object.isRequired
+};
+
+export default Index;
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            path
+            title
+          }
+        }
+      }
+    }
+  }
+`;
