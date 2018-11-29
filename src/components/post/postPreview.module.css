@@ -1,0 +1,123 @@
+.container {
+  @mixin boxShadow sm;
+
+  align-items: center;
+  background: $palette-light;
+  border-radius: resolve($space-m + $space-s);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: $space-xxl 0;
+  min-height: $space-xxl;
+  padding: $space-l;
+  position: relative;
+
+  &:hover {
+    .image {
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: $viewport-xsmall) {
+    @mixin boxShadow m;
+
+    flex-direction: row;
+    height: 400px;
+    margin: $space-xl 0;
+
+  }
+}
+
+.thumbnail {
+  display: flex;
+  margin: 0;
+  transform: translateY(-64px);
+
+  @media screen and (min-width: $viewport-xsmall) {
+    min-width: 50%;
+    transform: translateY(0);
+  }
+}
+
+.image {
+  @mixin boxShadow sm;
+
+  background-color: $palette-light;
+  border-radius: resolve($space-m + $space-s);
+  flex-shrink: 0;
+  height: 200px;
+  margin: 0;
+  overflow: hidden;
+  transition: .5s;
+  width: 300px;
+
+  img {
+    margin: 0;
+  }
+
+
+  @media screen and (min-width: $viewport-xsmall) {
+    @mixin boxShadow m;
+
+    height: 300px;
+    transform: translateX(-80px);
+    width: 400px;
+
+    &::after {
+      background-color: $palette-primary;
+      border-radius: resolve($space-m + $space-s);
+      content: '';
+      height: 300px;
+      left: 0;
+      opacity: .8;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      transition: .5s;
+      width: 400px;
+      z-index: $foreground;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-$space-m);
+  transition: .5s;
+
+  @media screen and (min-width: $viewport-xsmall) {
+    transform: translateY(0);
+  }
+}
+
+.excerpt {
+  font-family: 'Cutive Mono';
+  font-size: .8rem;
+  margin-bottom: $space-s;
+}
+
+.title {
+  font-family: 'Cutive';
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin: $space-s 0;
+}
+
+.date {
+  font-family: 'Cutive Mono';
+  font-weight: lighter;
+  margin-bottom: $space-s;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  margin: $space-l 0;
+
+  @media screen and (min-width: $viewport-xsmall) {
+    justify-content: flex-start;
+  }
+}

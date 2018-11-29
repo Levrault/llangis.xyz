@@ -16,7 +16,7 @@
   }
 
   61% {
-    transform: scale(0.04);
+    transform: scale(.04);
   }
 
   99.9% {
@@ -102,7 +102,7 @@
   &::before {
     @mixin boxShadow xs;
 
-    background: yellow;
+    background: $palette-primary;
     border-radius: 100%;
     bottom: 0; 
     content: '';
@@ -132,7 +132,7 @@
   }
 
   &.enterDone {
-    background: yellow;
+    background: $palette-primary;
     height: 100%;
     width: 100%;
 
@@ -154,7 +154,7 @@
 
     &::before {
       animation: pop-out .8s 0s ease-out forwards;
-      background: yellow;
+      background: $palette-primary;
     }
 
     .list,

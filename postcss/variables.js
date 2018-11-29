@@ -3,6 +3,8 @@
 // colors themes
 // https://www.materialpalette.com/indigo/deep-purple
 const palette = {
+  'palette-primary': '#80d1f7',
+  'palette-primary-variant': '#02a3ee',
   'palette-dark': '#212121',
   'palette-light': '#FFFFFF'
 };
@@ -27,8 +29,8 @@ const layers = {
 
 // for media queries
 const viewport = {
-  'viewport-xsmall': '700px',
-  'viewport-small': '961px',
+  'viewport-xsmall': '800px',
+  'viewport-small': '900px',
   'viewport-medium': '1285px',
   'viewport-large': '1600px',
   'viewport-wide': '1920px'
