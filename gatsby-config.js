@@ -2,7 +2,7 @@ const postCSSConfig = require('./postcss.config');
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter'
+    title: 'llangis.xyz'
   },
   plugins: [
     {

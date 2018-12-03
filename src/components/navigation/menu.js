@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
 import IconButton from '../button/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import NavigationMenu from './navigationMenu';
+import { MdMenu } from 'react-icons/md';
+import Modal from '../modal/modal';
+import ContactMe from '../contact/contactme';
 import TRANSITION from '../../animations/cssTransitionState';
 import styles from './menu.module.css';
 
@@ -18,17 +18,17 @@ class Menu extends PureComponent {
   constructor (props) {
     super(props);
     this.state = {
-      navigationFlag: TRANSITION.UNMOUNTED
+      modalFlag: TRANSITION.UNMOUNTED
     };
   }
 
   /**
-   * @param {string} navigationFlag
+   * @param {string} modalFlag
    * @returns {function}
    */
-  handleFlagChange = (navigationFlag) => () => {
+  handleFlagChange = (modalFlag) => () => {
     this.setState({
-      navigationFlag
+      modalFlag
     });
   }
 
@@ -37,17 +37,19 @@ class Menu extends PureComponent {
   * @returns {node}
   */
   render () {
-    const { navigationFlag } = this.state;
+    const { modalFlag } = this.state;
     return (
       <div className={styles.container}>
         <IconButton className={styles.hamburger} onClick={this.handleFlagChange(TRANSITION.ENTER)}>
-          <MenuIcon />
+          <MdMenu />
         </IconButton>
-        <NavigationMenu
+        <Modal
           onClose={this.handleFlagChange(TRANSITION.LEAVING)}
           onTransitionExited={this.handleFlagChange(TRANSITION.UNMOUNTED)}
-          flag={navigationFlag}
-        />
+          flag={modalFlag}
+        >
+          <ContactMe />
+        </Modal>
       </div>
     );
   }

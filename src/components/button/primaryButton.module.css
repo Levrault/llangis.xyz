@@ -1,0 +1,19 @@
+.container {
+  background-color: $palette-primary;
+  border: none;
+  border-radius: $space-l;
+  color: $palette-dark;
+  cursor: pointer;
+  font-family: 'Cutive Mono';
+  font-size: 1.5rem;
+  outline: none;
+  padding: $space-m $space-l;
+  text-decoration: none;
+  transition: .2s;
+
+  &:hover {
+    @mixin boxShadow m;
+
+    background-color: $palette-primary-variant;
+  }
+}

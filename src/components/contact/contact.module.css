@@ -1,0 +1,58 @@
+.container {
+  @mixin boxShadow s;
+
+  align-items: center;
+  background: $palette-light;
+  border-radius: $space-m;
+  color: $palette-dark;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: $space-m;
+  opacity: 0;
+  padding: $space-s $space-m;
+  text-decoration: none;
+  transition: 1s;
+
+  &.enter {
+  }
+
+  &.enterDone {
+    opacity: 1;
+  }
+
+  &.exit {
+    opacity: 0;
+  }
+}
+
+.icon {
+  align-items: center;
+  border-radius: 50%;
+  color: $palette-light;
+  display: flex;
+  height: resolve($space-l + $space-m);
+  justify-content: center;
+  padding: $space-s;
+  width: resolve($space-l + $space-m);
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: $space-m;
+}
+
+.label {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.username {
+  color: $palette-border;
+  font-size: 1.2rem;
+}
+
+.action {
+  font-size: 3rem;
+}

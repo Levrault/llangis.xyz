@@ -1,3 +1,5 @@
+/* @see https://codemyui.com/fullscreen-overlay-navigation-menu/ */
+
 @keyframes pop-in {
   0% {
     border-radius: 100%;
@@ -15,7 +17,7 @@
     transform: scale(.02) translateY(0);
   }
 
-  61% {
+  80% {
     transform: scale(.04);
   }
 
@@ -129,6 +131,10 @@
       transform: rotate(180deg);
       transition-delay: .8s;
     }
+
+    .inner {
+      opacity: 0;
+    }
   }
 
   &.enterDone {
@@ -144,7 +150,7 @@
       transition-delay: 0;
     }
 
-    .list {
+    .inner {
       opacity: 1;
     }
   }
@@ -157,7 +163,7 @@
       background: $palette-primary;
     }
 
-    .list,
+    .inner,
     .close {
       opacity: 0;
       transition: .25s;
@@ -178,12 +184,9 @@
   }
 }
 
-.list {
+.inner {
   font-family: 'Cutive Mono';
   font-size: 2rem;
-  list-style: none;
-  margin: 0;
-  opacity: 0;
   transition: .5s;
   transition-delay: .25s;
 }
