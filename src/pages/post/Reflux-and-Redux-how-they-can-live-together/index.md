@@ -2,6 +2,7 @@
 path: "/reflux-and-redux-how-they-can-live-together"
 date: "2018-06-19T17:12:33.962Z"
 title: "Reflux and Redux how they can live together ?"
+thumbnail: "./thumbnail.jpg"
 ---
 
 Reflux is a simple library for unidirectional dataflow architecture and Redux is a predictable state container for JavaScript apps. In a modern react application, Reflux seems irrelevent and Redux seems to be the best solution to date.

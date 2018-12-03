@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import PostLink from "../components/link/post-link";
 import Layout from '../components/layout';
+import PostsList from '../components/list/postsList';
 
 /**
  * Index page
@@ -10,13 +10,11 @@ import Layout from '../components/layout';
  * @param {array} edges
  */
 const Index = ({ data: { allMarkdownRemark: { edges } } }) => {
-  const posts = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />);
+  const posts = edges.filter(edge => !!edge.node.frontmatter.date);
 
   return (
     <Layout>
-      <div>{posts}</div>
+      <PostsList posts={posts} />
     </Layout>
   );
 };
@@ -33,11 +31,18 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          excerpt(pruneLength: 250)
+          excerpt(pruneLength: 140)
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             path
-            title
+            title,
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 400) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
