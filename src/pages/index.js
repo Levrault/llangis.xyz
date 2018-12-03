@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PostsList from '../components/list/postsList';
+import Title from '../components/title/title';
 
 /**
  * Index page
@@ -14,6 +15,7 @@ const Index = ({ data: { allMarkdownRemark: { edges } } }) => {
 
   return (
     <Layout>
+      <Title>llangis.xyz</Title>
       <PostsList posts={posts} />
     </Layout>
   );

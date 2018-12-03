@@ -1,0 +1,8 @@
+.container {
+  color: $palette-dark;
+  display: block;
+  font-family: 'Cutive';
+  font-size: 2rem;
+  margin-bottom: $space-xl;
+  text-decoration: none;
+}
