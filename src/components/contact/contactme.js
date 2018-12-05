@@ -60,6 +60,20 @@ class ContactMe extends Component {
   }
 
   /**
+   * update html overflow
+   */
+  componentDidMount () {
+    document.documentElement.style.overflowY = 'hidden';
+  }
+
+  /**
+   * hide overflow on mount
+   */
+  componentWillUnmount () {
+    document.documentElement.style.overflowY = '';
+  }
+
+  /**
    * @param {string} contactsFlag
    * @returns {function}
    */
@@ -104,7 +118,7 @@ class ContactMe extends Component {
         </div>
 
         {contacts.map((contact) => (
-          <Contact {...contact} state={contactsFlag === TRANSITION.ENTER} />
+          <Contact key={contact.label} {...contact} state={contactsFlag === TRANSITION.ENTER} />
         ))}
       </div>
     );
