@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import styles from './IconButton.module.css';
 
 /**
- * HamburgerButton button
+ * Icon button
  * @param {bool} [active=false]
  * @returns {node}
  */

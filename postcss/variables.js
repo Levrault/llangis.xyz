@@ -6,7 +6,8 @@ const palette = {
   'palette-primary': '#80d1f7',
   'palette-primary-variant': '#02a3ee',
   'palette-dark': '#212121',
-  'palette-light': '#FFFFFF'
+  'palette-light': '#FFFFFF',
+  'palette-border': '#dadce0'
 };
 
 // spaces
@@ -23,7 +24,7 @@ const spaces = {
 const layers = {
   foreground: 20,
   between: 10,
-  middleGround: 5,
+  middleground: 5,
   background: 1
 };
 

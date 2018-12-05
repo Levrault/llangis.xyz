@@ -1,8 +1,11 @@
+/* @see https://codemyui.com/gradient-card-ui-image-info-slider/ */
+
 .container {
   @mixin boxShadow sm;
 
   align-items: center;
   background: $palette-light;
+  border: 1px solid #dadce0;
   border-radius: resolve($space-m + $space-s);
   display: flex;
   flex-direction: column;
@@ -45,6 +48,7 @@
   @mixin boxShadow sm;
 
   background-color: $palette-light;
+  border: 1px solid #dadce0;
   border-radius: resolve($space-m + $space-s);
   flex-shrink: 0;
   height: 200px;

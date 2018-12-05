@@ -1,0 +1,64 @@
+/* @see https://codemyui.com/contact-card-profile-card-animation/ */
+
+.container {
+  height: 100vh;
+  position: absolute;
+  transform: translate(-50%, -35%);
+  transition: 1s;
+  width: 90%;
+
+  &.active {
+    transform: translate(-50%, -43%);
+  }
+
+  @media screen and (min-width: $viewport-xsmall) {
+    transform: translate(-50%, -20%);
+    width: auto;
+
+    &.active {
+      transform: translate(-50%, -43%);
+    }
+  }
+}
+
+.content {
+  position: relative;
+}
+
+.hiddenFooter {
+  align-items: center;
+  background: $palette-primary-variant;
+  border-radius: 0 0 resolve($space-m + $space-s) resolve($space-m + $space-s);
+  bottom: resolve($space-xl + $space-m);
+  display: flex;
+  font-size: 1.5rem;
+  height: resolve($space-xl + $space-m);
+  justify-content: flex-start;
+  left: 0;
+  padding: $space-l;
+  position: absolute;
+  width: 100%;
+  z-index: $background;
+
+  &.enter {
+    transform: translateY($space-xl);
+    transition: .5s;
+  }
+
+  &.enterDone {
+    bottom: -79px;
+    transition: .5s;
+    z-index: $middleground;
+  }
+
+  &.exit {
+    transform: translateY(-$space-xl);
+    transition: .5s;
+    z-index: $middleground;
+  }
+
+  @media screen and (min-width: $viewport-xsmall) {
+    width: 700px;
+  }
+
+} 
