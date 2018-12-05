@@ -12,7 +12,7 @@ import styles from './contact.module.css';
  * @param {string} label
  * @param {string} url
  * @param {string} username
- * @param {node}   Icon
+ * @param {function}   Icon
  */
 const Contact = ({ state, color, label, url, username, Icon }) => {
   return (
@@ -53,7 +53,7 @@ Contact.propTypes = {
   label: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
-  Icon: PropTypes.node.isRequired
+  Icon: PropTypes.func.isRequired
 };
 
 export default Contact;

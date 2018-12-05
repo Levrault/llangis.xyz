@@ -176,8 +176,9 @@
   opacity: .5;
   position: absolute;
   top: $space-m;
-  transition: .5s;
   transform-origin: center;
+  transition: .5s;
+  z-index: $foreground;
 
   &&:hover {
     opacity: 1;
