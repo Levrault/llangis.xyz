@@ -5,6 +5,10 @@ title: "How I use React's new context api"
 thumbnail: "./thumbnail.png"
 ---
 
+
+
+*Warning this article was use on my old website, this link is right* [here](https://upbeat-mirzakhani-da8fb0.netlify.com/)
+
 # A brief explanation
 
 In version 16.3, React decided to release the final version of its context api. Finally, it's no longer experimental. For those who do not know React's context api, we can read in the official documentation that *Context is designed to share data that is considered "global" for a tree of React component*. 
@@ -188,7 +192,7 @@ Now I have a global store with
 
 # ConsumING (or getting) everything
 
-Now that all my data is stored, I need to get them or update them. This is when the Consumer component can be used. Consumer, beside of Provider, needs a function as a child. This function is used to get the data that we had passed through the Provider.
+Now that all my data are stored, I need to get them or update them. This is when the Consumer component can be used. Consumer, beside of Provider, needs a function as a child. This function is used to get the data that we had passed through the Provider.
 
 In my profile component, I only need to get data, so it is going to look like this when using the Consumer.
 
