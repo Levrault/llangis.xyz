@@ -16,7 +16,6 @@ const PostPreview = ({ excerpt, frontmatter }) => {
     <li className={styles.container}>
       <div className={styles.thumbnail}>
         <Img fluid={thumbnail.childImageSharp.fluid} className={styles.image} />
-        <div className={styles.placeholder} />
       </div>
       <div className={styles.content}>
         <div className={styles.date}>{date}</div>
