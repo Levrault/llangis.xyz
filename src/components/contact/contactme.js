@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { CSSTransition } from 'react-transition-group';
 import { IoLogoTwitter, IoLogoLinkedin, IoLogoGithub, IoLogoGoogle } from 'react-icons/io';
 import TRANSITION from '../../animations/cssTransitionState';
-import Contact from './contact';
+import ContactsList from './contactsList';
 import ContactContent from './contactContent';
 import styles from './contactme.module.css';
 
@@ -60,20 +60,6 @@ class ContactMe extends Component {
   }
 
   /**
-   * update html overflow
-   */
-  componentDidMount () {
-    document.documentElement.style.overflowY = 'hidden';
-  }
-
-  /**
-   * hide overflow on mount
-   */
-  componentWillUnmount () {
-    document.documentElement.style.overflowY = '';
-  }
-
-  /**
    * @param {string} contactsFlag
    * @returns {function}
    */
@@ -117,9 +103,7 @@ class ContactMe extends Component {
 
         </div>
 
-        {contacts.map((contact) => (
-          <Contact key={contact.label} {...contact} state={contactsFlag === TRANSITION.ENTER} />
-        ))}
+        <ContactsList contacts={contacts} state={contactsFlag === TRANSITION.ENTER} />
       </div>
     );
   }
