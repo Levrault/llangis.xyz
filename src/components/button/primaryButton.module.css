@@ -1,11 +1,12 @@
 .container {
   background-color: $palette-primary;
-  border: none;
+  border: 0;
   border-radius: $space-l;
   color: $palette-dark;
   cursor: pointer;
   font-family: 'Cutive Mono';
   font-size: 1.5rem;
+  line-height: 1;
   outline: none;
   padding: $space-m $space-l;
   text-decoration: none;

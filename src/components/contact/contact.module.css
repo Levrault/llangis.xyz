@@ -62,7 +62,7 @@
   display: none;
 
   @media screen and (min-width: $viewport-xsmall) {
-    color: $palette-border;
+    color: $palette-dark-light;
     display: inline;
     font-size: 1.2rem;
   }
@@ -72,7 +72,8 @@
   display: none;
 
   @media screen and (min-width: $viewport-xsmall) {
-    display: inline;
+    align-items: center;
+    display: flex;
     font-size: 3rem;
   }
 }
