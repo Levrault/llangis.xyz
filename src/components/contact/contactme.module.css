@@ -1,19 +1,20 @@
 /* @see https://codemyui.com/contact-card-profile-card-animation/ */
 
 .container {
-  height: 100vh;
   padding: 0 $space-m;
-  position: absolute;
-  transform: translate(-50%, -37%);
+  position: fixed;
+  transform: translate(-50%, -43%);
   transition: 1s;
   width: 100%;
 
   &.active {
     overflow-y: scroll;
-    transform: translate(-50%, -49%);
+    transform: translate(-50%, -50%);
   }
 
   @media screen and (min-width: $viewport-xsmall) {
+    height: 100vh;
+    position: absolute;
     transform: translate(-50%, -20%);
     width: auto;
 
@@ -32,10 +33,10 @@
   align-items: center;
   background: $palette-primary-variant;
   border-radius: 0 0 resolve($space-m + $space-s) resolve($space-m + $space-s);
-  bottom: resolve($space-xl + $space-m);
+  bottom: $space-xl;
   display: flex;
   font-size: 1.5rem;
-  height: resolve($space-xl + $space-m);
+  height: $space-xl;
   justify-content: flex-start;
   left: 0;
   padding: $space-l;
@@ -49,7 +50,7 @@
   }
 
   &.enterDone {
-    bottom: -79px;
+    bottom: -64px;
     transition: .5s;
     z-index: $middleground;
   }
@@ -61,7 +62,13 @@
   }
 
   @media screen and (min-width: $viewport-xsmall) {
+    bottom: resolve($space-xl + $space-m);
+    height: resolve($space-xl + $space-m);
     width: 700px;
+
+    &.enterDone {
+      bottom: -79px;
+    }
   }
 
 } 

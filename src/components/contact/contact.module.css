@@ -7,14 +7,10 @@
   color: $palette-dark;
   display: flex;
   justify-content: space-between;
-  margin-bottom: $space-m;
   opacity: 0;
   padding: $space-s $space-m;
   text-decoration: none;
   transition: 1s;
-
-  &.enter {
-  }
 
   &.enterDone {
     opacity: 1;
@@ -23,6 +19,11 @@
   &.exit {
     opacity: 0;
   }
+
+  @media screen and (min-width: $viewport-xsmall) {
+    margin-bottom: $space-m;
+  }
+
 }
 
 .icon {
@@ -37,22 +38,41 @@
 }
 
 .content {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  margin-left: $space-m;
+  display: none;
+
+  @media screen and (min-width: $viewport-xsmall) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-left: $space-m;
+  }
 }
 
 .label {
-  font-size: 1.5rem;
-  text-transform: capitalize;
+  display: none;
+
+  @media screen and (min-width: $viewport-xsmall) {
+    display: inline;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+  }
 }
 
 .username {
-  color: $palette-border;
-  font-size: 1.2rem;
+  display: none;
+
+  @media screen and (min-width: $viewport-xsmall) {
+    color: $palette-border;
+    display: inline;
+    font-size: 1.2rem;
+  }
 }
 
 .action {
-  font-size: 3rem;
+  display: none;
+
+  @media screen and (min-width: $viewport-xsmall) {
+    display: inline;
+    font-size: 3rem;
+  }
 }
