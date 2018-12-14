@@ -2,9 +2,48 @@ const postCSSConfig = require('./postcss.config');
 
 module.exports = {
   siteMetadata: {
-    title: 'llangis.xyz'
+    title: 'llangis.xyz',
+    siteUrl: 'https://llangis.xyz'
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        output: '/sitemap.xml',
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
+      }`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://llangis.xyz',
+        sitemap: 'https://llangis.xyz/sitemap.xml',
+        resolveEnv: () => process.env.GATSBY_ENV,
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }]
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
+      }
+    },
     {
       resolve: 'gatsby-plugin-typography',
       options: {
