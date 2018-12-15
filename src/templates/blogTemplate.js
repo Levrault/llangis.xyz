@@ -11,13 +11,13 @@ import HomeLink from '../components/link/homeLink';
  */
 export default function BlogTemplate ({ data }) {
   const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+  const { frontmatter: { title, date }, html } = markdownRemark;
   return (
-    <Layout>
+    <Layout articleTitle={title}>
       <HomeLink />
       <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
+        <h1>{title}</h1>
+        <h2>{date}</h2>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}

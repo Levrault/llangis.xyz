@@ -11,7 +11,6 @@ import Img from 'gatsby-image';
 const PostPreview = ({ excerpt, frontmatter }) => {
   const { title, date, thumbnail } = frontmatter;
 
-  console.log('frontmatter', frontmatter); //TODO: to remove
   return (
     <li className={styles.container}>
       <div className={styles.thumbnail}>

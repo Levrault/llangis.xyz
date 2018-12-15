@@ -2,9 +2,53 @@ const postCSSConfig = require('./postcss.config');
 
 module.exports = {
   siteMetadata: {
-    title: 'llangis.xyz'
+    title: 'llangis.xyz',
+    titleTemplate: '%s · Luc-Frederic Langis',
+    siteUrl: 'https://llangis.xyz',
+    metaUrl: 'llangis.xyz',
+    twitterUsername: '@LFLangis',
+    description: 'personal blog',
+    image: '../images/favicon.jpg'
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        output: '/sitemap.xml',
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
+      }`
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://llangis.xyz',
+        sitemap: 'https://llangis.xyz/sitemap.xml',
+        resolveEnv: () => process.env.GATSBY_ENV,
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }]
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
+      }
+    },
     {
       resolve: 'gatsby-plugin-typography',
       options: {
@@ -61,11 +105,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'llangis.xyz',
+        short_name: 'llangis',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#80d1f7',
+        theme_color: '#80d1f7',
         display: 'minimal-ui',
         icon: 'src/images/favicon.jpg' // This path is relative to the root of the site.
       }

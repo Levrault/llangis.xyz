@@ -38,9 +38,4 @@ const viewport = {
   'viewport-wide': '1920px'
 };
 
-const gameCanvas = {
-  'game-width': '240px',
-  'game-height': '160px'
-};
-
-module.exports = { ...spaces, ...palette, ...layers, ...viewport, ...gameCanvas };
+module.exports = { ...spaces, ...palette, ...layers, ...viewport };
