@@ -3,7 +3,12 @@ const postCSSConfig = require('./postcss.config');
 module.exports = {
   siteMetadata: {
     title: 'llangis.xyz',
-    siteUrl: 'https://llangis.xyz'
+    titleTemplate: '%s · Luc-Frederic Langis',
+    siteUrl: 'https://llangis.xyz',
+    metaUrl: 'llangis.xyz',
+    twitterUsername: '@LFLangis',
+    description: 'personal blog',
+    image: '../images/favicon.jpg'
   },
   plugins: [
     {
@@ -100,11 +105,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'llangis.xyz',
+        short_name: 'llangis',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#80d1f7',
+        theme_color: '#80d1f7',
         display: 'minimal-ui',
         icon: 'src/images/favicon.jpg' // This path is relative to the root of the site.
       }
