@@ -3,6 +3,6 @@
   display: block;
   font-family: 'Cutive';
   font-size: 2rem;
-  margin-bottom: $space-xl;
+  margin: resolve($space-xl + $space-m) 0 $space-l;
   text-decoration: none;
 }

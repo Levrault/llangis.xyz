@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: $space-xxl 0;
+  margin: 0 0 $space-xxl;
   min-height: $space-xxl;
   padding: $space-l;
   position: relative;
