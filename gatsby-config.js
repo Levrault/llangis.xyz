@@ -6,6 +6,7 @@ module.exports = {
     titleTemplate: '%s · Luc-Frederic Langis',
     siteUrl: 'https://llangis.xyz',
     metaUrl: 'llangis.xyz',
+    author: 'Luc-Frédéric Langis',
     twitterUsername: '@LFLangis',
     description: 'personal blog',
     image: '../images/favicon.jpg'
@@ -38,15 +39,7 @@ module.exports = {
       options: {
         host: 'https://llangis.xyz',
         sitemap: 'https://llangis.xyz/sitemap.xml',
-        resolveEnv: () => process.env.GATSBY_ENV,
-        env: {
-          development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }]
-          },
-          production: {
-            policy: [{ userAgent: '*', allow: '/' }]
-          }
-        }
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     },
     {

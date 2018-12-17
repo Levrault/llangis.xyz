@@ -51,6 +51,7 @@ class Layout extends Component {
             titleTemplate,
             metaUrl,
             description,
+            author,
             twitterUsername, 
             image
           }
@@ -65,6 +66,7 @@ class Layout extends Component {
               titleTemplate,
               description,
               twitterUsername,
+              author,
               image
             }
           } }
@@ -82,7 +84,8 @@ class Layout extends Component {
 
               <meta charSet="utf-8" />
               <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-
+              <meta name="keywords" lang="en" content="llangis luc-frederic langis react web unity godot krita javascript css front-end " />
+              <meta name="author" lang="en" content={author} />
               <meta name="image" content={image} />
               <meta property="og:type" content="article" />
               <meta property="og:url" content={metaUrl} />
