@@ -3,12 +3,12 @@
 
   align-items: center;
   background: $palette-light;
-  border-radius: $space-m;
+  border-radius: 100%;
   color: $palette-dark;
   display: flex;
   justify-content: space-between;
   opacity: 0;
-  padding: $space-s $space-m;
+  padding: $space-s;
   text-decoration: none;
   transition: 1s;
 
@@ -21,7 +21,9 @@
   }
 
   @media screen and (min-width: $viewport-xsmall) {
+    border-radius: $space-m;
     margin-bottom: $space-m;
+    padding: $space-s $space-m;
   }
 
 }
