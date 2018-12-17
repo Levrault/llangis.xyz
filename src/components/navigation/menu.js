@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PageContext from '../../context/page';
 import IconButton from '../button/IconButton';
 import { MdMenu } from 'react-icons/md';
 import Modal from '../modal/modal';
@@ -24,6 +25,19 @@ class Menu extends PureComponent {
 
   /**
    * @param {string} modalFlag
+   * @param {function} setScrollbarVisibility
+   * @returns {function}
+   */
+  handleModal = (modalFlag, setScrollbarVisibility) => () => {
+    this.setState({
+      modalFlag
+    });
+
+    setScrollbarVisibility(false);
+  }
+
+  /**
+   * @param {string} modalFlag
    * @returns {function}
    */
   handleFlagChange = (modalFlag) => () => {
@@ -40,9 +54,15 @@ class Menu extends PureComponent {
     const { modalFlag } = this.state;
     return (
       <div className={styles.container}>
-        <IconButton className={styles.hamburger} onClick={this.handleFlagChange(TRANSITION.ENTER)}>
-          <MdMenu />
-        </IconButton>
+
+        <PageContext.Consumer>
+          {({ setScrollbarVisibility }) => (
+            <IconButton className={styles.hamburger} onClick={this.handleModal(TRANSITION.ENTER, setScrollbarVisibility)}>
+              <MdMenu />
+            </IconButton>
+          )}
+        </PageContext.Consumer>
+
         <Modal
           onClose={this.handleFlagChange(TRANSITION.LEAVING)}
           onTransitionExited={this.handleFlagChange(TRANSITION.UNMOUNTED)}
