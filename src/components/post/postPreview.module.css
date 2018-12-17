@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 0 $space-xxl;
+  margin: 0 0 $space-xl;
   min-height: $space-xxl;
   padding: $space-l;
   position: relative;
@@ -22,11 +22,9 @@
   }
 
   @media screen and (min-width: $viewport-xsmall) {
-
     flex-direction: row;
     height: 400px;
     margin: $space-xl 0;
-
   }
 }
 
