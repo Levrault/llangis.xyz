@@ -1,4 +1,5 @@
 .container {
+  @mixin boxShadow s;
   background-color: $palette-primary;
   border: 0;
   border-radius: $space-l;

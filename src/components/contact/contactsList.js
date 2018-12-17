@@ -7,10 +7,10 @@ import styles from './contactsList.module.css';
  * @class ContactsList
  * @param {array} contacts
  */
-const ContactsList = ({ contacts, state }) => (
+const ContactsList = ({ contacts }) => (
   <div className={styles.container}>
     {contacts.map((contact) => (
-      <Contact key={contact.label} state={state} {...contact} />
+      <Contact key={contact.label} {...contact} />
     ))}
   </div>
 );
@@ -22,12 +22,7 @@ ContactsList.propTypes = {
     url: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
     Icon: PropTypes.func.isRequired
-  })),
-  state: PropTypes.bool
-};
-
-ContactsList.defaultProps = {
-  state: false
+  }))
 };
 
 export default ContactsList;

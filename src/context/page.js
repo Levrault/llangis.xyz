@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PageContext = React.createContext({
-  toggleBodyOverflow: () => {console.log('call empty'); }
+  toggleScrollbar: () => {console.warn('toggleScrollbar function has not been set'); }
 });
 
 export default PageContext;
