@@ -1,15 +1,16 @@
 /* @see https://codemyui.com/contact-card-profile-card-animation/ */
 
 .container {
+  height: 575px;
   padding: 0 $space-m;
   position: fixed;
-  transform: translate(-50%, -43%);
+  transform: translate(-50%, -39%);
   transition: 1s;
   width: 100%;
 
   &.active {
     overflow-y: scroll;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -47%);
   }
 
   @media screen and (min-width: $viewport-xsmall) {
