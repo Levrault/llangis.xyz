@@ -1,5 +1,5 @@
 .container {
-  @mixin boxShadow m;
+  @mixin boxShadow s;
 
   background: $palette-light;
   border-radius: resolve($space-m + $space-s);
