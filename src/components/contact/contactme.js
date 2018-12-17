@@ -5,6 +5,7 @@ import { IoLogoTwitter, IoLogoLinkedin, IoLogoGithub, IoLogoGoogle } from 'react
 import TRANSITION from '../../animations/cssTransitionState';
 import ContactsList from './contactsList';
 import ContactContent from './contactContent';
+import ContactContext from '../../context/contact';
 import styles from './contactme.module.css';
 
 /**
@@ -103,7 +104,9 @@ class ContactMe extends Component {
 
         </div>
 
-        <ContactsList contacts={contacts} state={contactsFlag === TRANSITION.ENTER} />
+        <ContactContext.Provider value={{ state: contactsFlag === TRANSITION.ENTER }}>
+          <ContactsList contacts={contacts} />
+        </ContactContext.Provider>
       </div>
     );
   }
