@@ -8,7 +8,7 @@
   transition: .2s;
 
   &:hover {
-    @mixin boxShadow m;
+    @mixin boxShadow s;
 
     background-color: $palette-primary-variant;
   }
