@@ -1,8 +1,6 @@
 /* @see https://codemyui.com/gradient-card-ui-image-info-slider/ */
 
 .container {
-  @mixin boxShadow sm;
-
   align-items: center;
   background: $palette-light;
   border: 1px solid #dadce0;
@@ -24,7 +22,6 @@
   }
 
   @media screen and (min-width: $viewport-xsmall) {
-    @mixin boxShadow m;
 
     flex-direction: row;
     height: 400px;
@@ -45,8 +42,6 @@
 }
 
 .image {
-  @mixin boxShadow sm;
-
   background-color: $palette-light;
   border: 1px solid #dadce0;
   border-radius: resolve($space-m + $space-s);
@@ -63,8 +58,6 @@
 
 
   @media screen and (min-width: $viewport-xsmall) {
-    @mixin boxShadow m;
-
     height: 300px;
     transform: translateX(-80px);
     width: 400px;

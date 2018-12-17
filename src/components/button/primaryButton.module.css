@@ -11,11 +11,9 @@
   outline: none;
   padding: $space-m $space-l;
   text-decoration: none;
-  transition: .2s;
+  transition: .5s;
 
   &:hover {
-    @mixin boxShadow m;
-
     background-color: $palette-primary-variant;
   }
 }
