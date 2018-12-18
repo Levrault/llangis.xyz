@@ -34,6 +34,7 @@ const ContactContent = ({ active, handleChange }) => {
 
       <div className={classnames(styles.footer, { [styles.active]: active })}>
         <PrimaryButton
+          aria-label="show social link"
           className={styles.primaryButton}
           onClick={handleChange}
         >

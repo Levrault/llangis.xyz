@@ -49,7 +49,11 @@ class Modal extends Component {
           <div>
             <PageContext.Consumer>
               {({ setScrollbarVisibility }) => (
-                <IconButton className={styles.close} onClick={this.handleCloseClick(setScrollbarVisibility)}>
+                <IconButton
+                  aria-label="close contact me modal"
+                  className={styles.close}
+                  onClick={this.handleCloseClick(setScrollbarVisibility)}
+                >
                   <MdClose />
                 </IconButton>
               )}
