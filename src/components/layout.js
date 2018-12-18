@@ -53,7 +53,8 @@ class Layout extends Component {
             description,
             author,
             twitterUsername, 
-            image
+            image,
+            keywords
           }
         }
       }
@@ -67,7 +68,8 @@ class Layout extends Component {
               description,
               twitterUsername,
               author,
-              image
+              image,
+              keywords
             }
           } }
         ) => (
@@ -79,26 +81,31 @@ class Layout extends Component {
             >
               <html className={classnames(styles.html, { [styles.inactive]: !hasScrollBar })} lang="en" />
 
-              {articleTitle && <title>{articleTitle}</title>}
-              {articleTitle && <meta property="og:title" content={articleTitle} />}
+              {articleTitle &&
+                <Fragment>
+                  <title>{articleTitle}</title>
+                  <meta property="og:title" content={articleTitle} />
+                  <meta property="og:type" content="article" />
+                </Fragment>
+              }
 
+              {/* basic */}
               <meta charSet="utf-8" />
               <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-              <meta name="keywords" lang="en" content="llangis luc-frederic langis react web unity godot krita javascript css front-end " />
+              <meta name="keywords" lang="en" content={keywords} />
               <meta name="author" lang="en" content={author} />
               <meta name="image" content={image} />
-              <meta property="og:type" content="article" />
               <meta property="og:url" content={metaUrl} />
               <meta property="og:description" content={description} />
+              <meta property="description" content={description} />
 
+              {/* apple */}
               <meta name="apple-mobile-web-app-title" content={metaUrl} />
               <meta name="application-name" content={metaUrl} />
               <meta name="theme-color" content="#80d1f7" />
-              <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-              <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-              <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
               <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#80d1f7" />
 
+              {/* twitter */}
               <meta name="twitter:card" content="summary" />
               <meta name="twitter:site" content={twitterUsername} />
               <meta name="twitter:creator" content={twitterUsername} />
