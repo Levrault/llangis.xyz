@@ -57,7 +57,11 @@ class Menu extends PureComponent {
 
         <PageContext.Consumer>
           {({ setScrollbarVisibility }) => (
-            <IconButton className={styles.hamburger} onClick={this.handleModal(TRANSITION.ENTER, setScrollbarVisibility)}>
+            <IconButton
+              aria-label="open contact me modal"
+              className={styles.hamburger}
+              onClick={this.handleModal(TRANSITION.ENTER, setScrollbarVisibility)}
+            >
               <MdMenu />
             </IconButton>
           )}
