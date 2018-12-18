@@ -97,7 +97,7 @@ class Layout extends Component {
               <meta name="image" content={image} />
               <meta property="og:url" content={metaUrl} />
               <meta property="og:description" content={description} />
-              <meta property="description" content={description} />
+              <meta name="description" content={description} />
 
               {/* apple */}
               <meta name="apple-mobile-web-app-title" content={metaUrl} />
