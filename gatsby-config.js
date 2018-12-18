@@ -8,7 +8,7 @@ module.exports = {
     metaUrl: 'llangis.xyz',
     author: 'Luc-Frédéric Langis',
     twitterUsername: '@LFLangis',
-    description: 'personal blog',
+    description: 'Blog of a Front End Software Development Engineer and amateur video game dev',
     image: '/icons/icon-48x48.png',
     keywords: 'llangis luc-frederic langis react web unity godot krita javascript css front-end'
   },
