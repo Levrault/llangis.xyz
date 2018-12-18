@@ -103,9 +103,6 @@ class Layout extends Component {
               <meta name="apple-mobile-web-app-title" content={metaUrl} />
               <meta name="application-name" content={metaUrl} />
               <meta name="theme-color" content="#80d1f7" />
-              <link rel="apple-touch-icon" sizes="180x180" href={image} />
-              <link rel="icon" type="image/jpg" sizes="32x32" href={image} />
-              <link rel="icon" type="image/jpg" sizes="16x16" href={image} />
               <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#80d1f7" />
 
               {/* twitter */}

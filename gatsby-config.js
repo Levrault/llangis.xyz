@@ -9,7 +9,7 @@ module.exports = {
     author: 'Luc-Frédéric Langis',
     twitterUsername: '@LFLangis',
     description: 'personal blog',
-    image: '../images/favicon.jpg',
+    image: '/icons/icon-48x48.png',
     keywords: 'llangis luc-frederic langis react web unity godot krita javascript css front-end'
   },
   plugins: [
