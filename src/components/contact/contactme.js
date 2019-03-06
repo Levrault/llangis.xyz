@@ -98,15 +98,11 @@ class ContactMe extends Component {
             unmountOnExit
           >
             <div className={styles.hiddenFooter}>
-              Contact me !
+              <ContactsList contacts={contacts} />
             </div>
           </CSSTransition>
 
         </div>
-
-        <ContactContext.Provider value={{ state: contactsFlag === TRANSITION.ENTER }}>
-          <ContactsList contacts={contacts} />
-        </ContactContext.Provider>
       </div>
     );
   }

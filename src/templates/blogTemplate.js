@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import HomeLink from '../components/link/homeLink';
+import ContactMe from '../components/contact/contactme';
 
 /**
  * Blog template
@@ -23,6 +24,8 @@ export default function BlogTemplate ({ data }) {
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
+      <HomeLink />
+      <ContactMe />
     </Layout>
   );
 }
