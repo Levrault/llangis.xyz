@@ -40,7 +40,7 @@ class Layout extends Component {
   */
   render () {
     const { articleTitle, children } = this.props;
-    const { hasScrollBar } = this.state;
+    console.log('this.props', this.props); //TODO: to remove
     return (
       <StaticQuery
         query={graphql`
@@ -79,15 +79,11 @@ class Layout extends Component {
               defaultTitle={title}
               bodyAttributes={{ className: styles.body }}
             >
-              <html className={classnames(styles.html, { [styles.inactive]: !hasScrollBar })} lang="en" />
+              <html className={styles.html} lang="en" />
 
-              {articleTitle &&
-                <Fragment>
-                  <title>{articleTitle}</title>
-                  <meta property="og:title" content={articleTitle} />
-                  <meta property="og:type" content="article" />
-                </Fragment>
-              }
+              {articleTitle && <title>{articleTitle}</title>}
+              {articleTitle && <meta property="og:title" content={articleTitle} />}
+              {articleTitle && <meta property="og:type" content="article" />}
 
               {/* basic */}
               <meta charSet="utf-8" />
