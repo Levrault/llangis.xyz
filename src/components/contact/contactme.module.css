@@ -23,13 +23,18 @@
   z-index: $background;
 
   &.enter {
-    transform: translateX(-$space-xxl);
+    transform: translateX(-400px);
     transition: .5s;
   }
 
   &.enterDone {
     transition: .5s;
     z-index: $foreground;
+  }
+
+  &.exit {
+    transform: translateX(-400px);
+    transition: .5s;
   }
 
   @media screen and (min-width: $viewport-xsmall) {

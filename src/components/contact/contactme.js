@@ -96,9 +96,7 @@ class ContactMe extends Component {
             timeout={150}
             unmountOnExit
           >
-            <div className={styles.hiddenFooter}>
-              <ContactsList contacts={contacts} />
-            </div>
+            <ContactsList contacts={contacts} />
           </CSSTransition>
 
         </div>
