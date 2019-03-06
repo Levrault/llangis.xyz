@@ -5,7 +5,6 @@ import { IoLogoTwitter, IoLogoLinkedin, IoLogoGithub, IoLogoGoogle } from 'react
 import TRANSITION from '../../animations/cssTransitionState';
 import ContactsList from './contactsList';
 import ContactContent from './contactContent';
-import ContactContext from '../../context/contact';
 import styles from './contactme.module.css';
 
 /**
