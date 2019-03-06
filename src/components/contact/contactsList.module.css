@@ -1,8 +1,4 @@
 .container {
   display: flex;
   justify-content: space-between;
-
-  @media screen and (min-width: $viewport-xsmall) {
-    flex-direction: column;
-  }
 }

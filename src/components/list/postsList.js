@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import PostPreview from '../post/postPreview';
 import styles from './postList.module.css';
+import ContactMe from '../contact/contactme';
 
 /**
  * List of all post link
  * @class PostsList
  * @param {array} posts
  */
-const PostsList = ({ posts }) => {
-  return (
+const PostsList = ({ posts }) => (
+  <Fragment>
+    <ContactMe />
     <ul className={styles.container}>
       {
         posts.map(({ node }) => (
@@ -21,8 +23,8 @@ const PostsList = ({ posts }) => {
         ))
       }
     </ul>
-  );
-};
+  </Fragment>
+);
 
 PostsList.propTypes = {
   posts: PropTypes.array

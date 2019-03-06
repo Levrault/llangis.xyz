@@ -1,28 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PostLink from '../link/postLink';
+import { Link } from 'gatsby';
 import styles from './postPreview.module.css';
-import Img from 'gatsby-image';
 
 /**
  * @class PostPreview
  * @param {object} data
  */
 const PostPreview = ({ excerpt, frontmatter }) => {
-  const { title, date, thumbnail } = frontmatter;
+  const { title, date, path } = frontmatter;
 
   return (
     <li className={styles.container}>
-      <div className={styles.thumbnail}>
-        <Img fluid={thumbnail.childImageSharp.fluid} className={styles.image} />
-      </div>
       <div className={styles.content}>
+        <Link className={styles.link} to={path}>{title}</Link>
         <div className={styles.date}>{date}</div>
-        <h1 className={styles.title}>{title}</h1>
         <div className={styles.excerpt} dangerouslySetInnerHTML={{ __html: excerpt }} />
-        <div className={styles.link}>
-          <PostLink {...frontmatter} />
-        </div>
       </div>
     </li>
   );

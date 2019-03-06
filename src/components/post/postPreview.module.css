@@ -2,88 +2,27 @@
 
 .container {
   align-items: center;
-  background: $palette-light;
-  border: 1px solid #dadce0;
-  border-radius: resolve($space-m + $space-s);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 0 $space-xl;
-  min-height: $space-xxl;
-  padding: $space-l;
+  margin: $space-l 0;
   position: relative;
-
-  &:hover {
-    .image {
-      &::after {
-        opacity: 0;
-      }
-    }
-  }
 
   @media screen and (min-width: $viewport-xsmall) {
     flex-direction: row;
-    height: 400px;
     margin: $space-xl 0;
-  }
-}
-
-.thumbnail {
-  display: flex;
-  margin: 0;
-  transform: translateY(-64px);
-
-  @media screen and (min-width: $viewport-xsmall) {
-    min-width: 50%;
-    transform: translateY(0);
-  }
-}
-
-.image {
-  background-color: $palette-light;
-  border: 1px solid #dadce0;
-  border-radius: resolve($space-m + $space-s);
-  flex-shrink: 0;
-  height: 200px;
-  margin: 0;
-  overflow: hidden;
-  transition: .5s;
-  width: 300px;
-
-  img {
-    margin: 0;
-  }
-
-
-  @media screen and (min-width: $viewport-xsmall) {
-    height: 300px;
-    transform: translateX(-80px);
-    width: 400px;
   }
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  transform: translateY(-$space-m);
-  transition: .5s;
-
-  @media screen and (min-width: $viewport-xsmall) {
-    transform: translateY(0);
-  }
+  
 }
 
 .excerpt {
   font-family: 'Cutive Mono';
-  font-size: .8rem;
   margin-bottom: $space-s;
-}
-
-.title {
-  font-family: 'Cutive';
-  font-size: 1.5rem;
-  font-weight: lighter;
-  margin: $space-s 0;
 }
 
 .date {
@@ -93,11 +32,10 @@
 }
 
 .link {
-  display: flex;
-  justify-content: center;
-  margin: $space-l 0;
-
-  @media screen and (min-width: $viewport-xsmall) {
-    justify-content: flex-start;
-  }
+  color: #ee5253;
+  font-family: 'Cutive';
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  text-decoration: none;
 }

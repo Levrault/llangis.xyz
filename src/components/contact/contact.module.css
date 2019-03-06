@@ -1,81 +1,22 @@
 .container {
-  @mixin boxShadow s;
-
   align-items: center;
-  background: $palette-light;
   border-radius: 100%;
   color: $palette-dark;
   display: flex;
   justify-content: space-between;
-  opacity: 0;
   padding: $space-s;
   text-decoration: none;
   transition: 1s;
-
-  &.enterDone {
-    opacity: 1;
-  }
-
-  &.exit {
-    opacity: 0;
-  }
-
-  @media screen and (min-width: $viewport-xsmall) {
-    border-radius: $space-m;
-    margin-bottom: $space-m;
-    padding: $space-s $space-m;
-  }
-
 }
 
 .icon {
+  @mixin boxShadow s;
   align-items: center;
   border-radius: 50%;
   color: $palette-light;
   display: flex;
-  height: resolve($space-l + $space-m);
-  justify-content: center;
-  padding: $space-s;
-  width: resolve($space-l + $space-m);
-}
-
-.content {
-  display: none;
-
-  @media screen and (min-width: $viewport-xsmall) {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin-left: $space-m;
-  }
-}
-
-.label {
-  display: none;
-
-  @media screen and (min-width: $viewport-xsmall) {
-    display: inline;
-    font-size: 1.5rem;
-    text-transform: capitalize;
-  }
-}
-
-.username {
-  display: none;
-
-  @media screen and (min-width: $viewport-xsmall) {
-    color: $palette-dark-light;
-    display: inline;
-    font-size: 1.2rem;
-  }
-}
-
-.action {
-  display: none;
-
-  @media screen and (min-width: $viewport-xsmall) {
-    align-items: center;
-    display: flex;
-    font-size: 3rem;
-  }
-}
+  height: $space-xl;
+  justify-content: center;  
+  /* padding: $space-s; */
+  width: $space-xl;
+} 

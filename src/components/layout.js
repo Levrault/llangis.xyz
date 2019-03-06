@@ -1,10 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import PageContext from '../context/page';
-import Menu from './navigation/menu';
 import styles from './layout.module.css';
 
 /**
@@ -40,7 +38,6 @@ class Layout extends Component {
   */
   render () {
     const { articleTitle, children } = this.props;
-    const { hasScrollBar } = this.state;
     return (
       <StaticQuery
         query={graphql`
@@ -79,15 +76,11 @@ class Layout extends Component {
               defaultTitle={title}
               bodyAttributes={{ className: styles.body }}
             >
-              <html className={classnames(styles.html, { [styles.inactive]: !hasScrollBar })} lang="en" />
+              <html className={styles.html} lang="en" />
 
-              {articleTitle &&
-                <Fragment>
-                  <title>{articleTitle}</title>
-                  <meta property="og:title" content={articleTitle} />
-                  <meta property="og:type" content="article" />
-                </Fragment>
-              }
+              {articleTitle && <title>{articleTitle}</title>}
+              {articleTitle && <meta property="og:title" content={articleTitle} />}
+              {articleTitle && <meta property="og:type" content="article" />}
 
               {/* basic */}
               <meta charSet="utf-8" />
@@ -113,10 +106,6 @@ class Layout extends Component {
               <meta name="twitter:description" content={description} />
               <meta name="twitter:image" content={image} />
             </Helmet>
-
-            <PageContext.Provider value={{ setScrollbarVisibility: this.setScrollbarVisibility }}>
-              <Menu />
-            </PageContext.Provider>
 
             <div className={styles.container}>
               {children}
