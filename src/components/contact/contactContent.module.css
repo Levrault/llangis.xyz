@@ -21,10 +21,10 @@
   flex-direction: column;
   font-family: 'Cutive Mono';
   justify-content: space-around;
-  margin-bottom: $space-m;
 
   @media screen and (min-width: $viewport-xsmall) {
     flex-direction: row;
+    margin-bottom: $space-m;
   }
 }
 
@@ -100,7 +100,7 @@
       font-size: 3rem;
       height: $space-xl;
       padding: 5px;
-      transform: translateX(100px);
+      transform: translateX(108px);
       width: $space-xl;
     }
   }
