@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { CSSTransition } from 'react-transition-group';
-import { IoLogoTwitter, IoLogoLinkedin, IoLogoGithub, IoLogoGoogle } from 'react-icons/io';
+import { IoLogoTwitter, IoLogoLinkedin, IoLogoGithub, IoIosMail } from 'react-icons/io';
 import TRANSITION from '../../animations/cssTransitionState';
 import ContactsList from './contactsList';
 import ContactContent from './contactContent';
@@ -23,7 +23,7 @@ class ContactMe extends Component {
         label: 'gmail',
         username: 'lucf.langis@gmail.com',
         url: 'mailto:lucf.langis@gmail.com',
-        Icon: IoLogoGoogle
+        Icon: IoIosMail
       },
       {
         color: '#0077B5',
