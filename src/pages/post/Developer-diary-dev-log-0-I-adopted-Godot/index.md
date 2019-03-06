@@ -149,7 +149,7 @@ Yeap, this a strange dev lop 0, but I needed to resume three month of developmen
 
 
 
-## Coming soon 
+## Coming next
 
 My next feature are gonna be
 
