@@ -3,7 +3,6 @@
 .container {
   min-height: 450px;
   overflow: hidden;
-  padding: 0 $space-m;
   width: 100%;
 
   @media screen and (min-width: $viewport-xsmall) {
