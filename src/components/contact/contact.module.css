@@ -16,7 +16,6 @@
   color: $palette-light;
   display: flex;
   height: $space-xl;
-  justify-content: center;  
-  /* padding: $space-s; */
+  justify-content: center;
   width: $space-xl;
 } 
