@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { MdExpandLess } from 'react-icons/md';
-import avatar from '../../images/avatar.jpg';
+import avatar from '../../images/avatar.webp';
 import PrimaryButton from '../button/primaryButton';
 import styles from './contactContent.module.css';
 
@@ -15,7 +15,13 @@ const ContactContent = ({ active, handleChange }) => {
     <div className={classnames(styles.container, { [styles.active]: active })}>
       <div className={styles.content}>
         <div className={styles.avatar}>
-          <img className={styles.image} src={avatar} alt="picture of Luc-Frederic with an authentic canadian ww2 helmet" height="225px" width="226px" />
+          <img
+            className={styles.image}
+            src={avatar}
+            alt="picture of Luc-Frederic with an authentic canadian ww2 helmet"
+            height="225px"
+            width="226px"
+          />
         </div>
         <div className={styles.description}>
           <p className={styles.lead}>
