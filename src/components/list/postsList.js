@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import PostPreview from '../post/postPreview';
 import styles from './postList.module.css';
-import ContactBlock from '../contact/contactBlock';
+import ContactBlock, { ContactBlockHook } from '../contact/contactBlock';
 
 /**
  * List of all post link
@@ -12,6 +12,7 @@ import ContactBlock from '../contact/contactBlock';
 const PostsList = ({ posts }) => (
   <Fragment>
     <ContactBlock />
+    <ContactBlockHook />
     <ul className={styles.container}>
       {
         posts.map(({ node }) => (
