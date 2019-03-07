@@ -3,20 +3,20 @@ import classnames from 'classnames';
 import { CSSTransition } from 'react-transition-group';
 import { IoLogoTwitter, IoLogoLinkedin, IoLogoGithub, IoIosMail } from 'react-icons/io';
 import TRANSITION from '../../animations/cssTransitionState';
-import ContactsList from './contactsList';
+import ContactsInfoList from './contactsInfoList';
 import ContactContent from './contactContent';
-import styles from './contactme.module.css';
+import styles from './contactBlock.module.css';
 
 /**
  * Contact me component
  * @class ContactMe
  */
-class ContactMe extends Component {
+class ContactBlock extends Component {
   /**
    * get contacts array
    * @returns {array}
    */
-  static getContacts () {
+  static getContactsInfo () {
     return [
       {
         color: '#c71610',
@@ -76,7 +76,7 @@ class ContactMe extends Component {
   render () {
     const { contactsFlag } = this.state;
     const primaryActions = contactsFlag === TRANSITION.UNMOUNTED ? TRANSITION.ENTER : TRANSITION.UNMOUNTED;
-    const contacts = this.constructor.getContacts();
+    const contacts = this.constructor.getContactsInfo();
     return (
       <div className={classnames(styles.container, { [styles.active]: contactsFlag !== TRANSITION.UNMOUNTED })}>
         <div className={styles.content}>
@@ -96,7 +96,7 @@ class ContactMe extends Component {
             timeout={150}
             unmountOnExit
           >
-            <ContactsList contacts={contacts} />
+            <ContactsInfoList contacts={contacts} />
           </CSSTransition>
 
         </div>
@@ -105,4 +105,4 @@ class ContactMe extends Component {
   }
 }
 
-export default ContactMe;
+export default ContactBlock;

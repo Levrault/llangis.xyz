@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import HomeLink from '../components/link/homeLink';
-import ContactMe from '../components/contact/contactme';
+import ContactBlock from '../components/contact/contactBlock';
 
 /**
  * Blog template
@@ -25,7 +25,7 @@ export default function BlogTemplate ({ data }) {
         />
       </div>
       <HomeLink />
-      <ContactMe />
+      <ContactBlock />
     </Layout>
   );
 }

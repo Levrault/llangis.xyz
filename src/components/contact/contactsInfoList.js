@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Contact from './contact';
-import styles from './contactsList.module.css';
+import ContactInfo from './contactInfo';
+import styles from './contactsInfoList.module.css';
 
 /**
  * @class ContactsList
  * @param {array} contacts
  */
-const ContactsList = ({ contacts }) => (
+const ContactsInfoList = ({ contacts }) => (
   <div className={styles.container}>
     {contacts.map((contact) => (
-      <Contact key={contact.label} {...contact} />
+      <ContactInfo key={contact.label} {...contact} />
     ))}
   </div>
 );
 
-ContactsList.propTypes = {
+ContactsInfoList.propTypes = {
   contacts: PropTypes.arrayOf(PropTypes.shape({
     color: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
@@ -25,4 +25,4 @@ ContactsList.propTypes = {
   }))
 };
 
-export default ContactsList;
+export default ContactsInfoList;
