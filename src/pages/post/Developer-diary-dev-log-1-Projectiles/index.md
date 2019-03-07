@@ -4,6 +4,7 @@ date: "2019-03-07T12:00:00.962Z"
 title: "Developer diary - dev log 1: Projectiles"
 description: "Let discover how to create projectile"
 thumbnail: "./thumbnail.jpg"
+draft: true
 ---
 
 After a long first entry, here a most lighter second post. My goal of the was to create an object pool for the throwing spear, bow and launch sort animation. I somekind of fail since I don't need object pooling in Godot. Instead, I create a light factory.

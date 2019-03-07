@@ -4,5 +4,6 @@
   font-family: 'Cutive';
   font-size: 2rem;
   margin: resolve($space-xl + $space-m) 0 $space-l;
+  position: relative;
   text-decoration: none;
 }

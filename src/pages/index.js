@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PostsList from '../components/list/postsList';
+import RssLink from '../components/link/rssLink';
 import Title from '../components/title/title';
 
 /**
@@ -15,7 +16,12 @@ const Index = ({ data: { allMarkdownRemark: { edges } } }) => {
 
   return (
     <Layout>
-      <Title>llangis.xyz</Title>
+      <Title>
+        <Fragment>
+          llangis.xyz
+          <RssLink />
+        </Fragment>
+      </Title>
       <PostsList posts={posts} />
     </Layout>
   );

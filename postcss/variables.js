@@ -5,6 +5,8 @@
 const palette = {
   'palette-primary': '#80d1f7',
   'palette-primary-variant': '#02a3ee',
+  'palette-theme': '#ee5253',
+  'palette-theme-light': '#ff6b6b',
   'palette-dark': '#212121',
   'palette-dark-light': '#607d8b',
   'palette-light': '#FFFFFF',
