@@ -6,6 +6,7 @@
   "dependencies": {
     "gatsby": "^2.1.23",
     "gatsby-image": "^2.0.22",
+    "gatsby-plugin-feed": "^2.0.14",
     "gatsby-plugin-manifest": "^2.0.5",
     "gatsby-plugin-offline": "^2.0.11",
     "gatsby-plugin-postcss": "^2.0.1",

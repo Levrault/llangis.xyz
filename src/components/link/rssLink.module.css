@@ -1,0 +1,11 @@
+.container {
+  color: $palette-theme-light;
+  font-size: 2rem;
+  position: absolute;
+  right: 0;
+  transition: .5s;
+
+  &:hover {
+    color: $palette-theme;
+  }
+}
