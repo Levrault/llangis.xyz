@@ -69,7 +69,6 @@ const Layout = ({ articleTitle, children }) => {
             <meta name="apple-mobile-web-app-title" content={metaUrl} />
             <meta name="application-name" content={metaUrl} />
             <meta name="theme-color" content="#80d1f7" />
-            <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#80d1f7" />
 
             {/* twitter */}
             <meta name="twitter:card" content="summary" />

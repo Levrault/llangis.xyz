@@ -1,8 +1,7 @@
 ---
 path: "/unity-tilemap-and-collision"
 date: "2018-07-05T10:15:00.962Z"
-title: "Unity, Tilemaps and collision"
-thumbnail: "./thumbnail.png"
+title: "Unity > Tilemaps and collision"
 ---
 
 Tilemaps are a very common technique in 2D development. It's consists of regrouping level, theme or items in the same regular shaped image. It makes it easier to build a consistent 2D game world and made game development more accessible, faster and optimized.

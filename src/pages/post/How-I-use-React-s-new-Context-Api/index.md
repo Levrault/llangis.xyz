@@ -1,8 +1,7 @@
 ---
 path: "/how-i-use-react-s-new-context-api"
 date: "2018-07-20T14:40:00.962Z"
-title: "How I use React's new context api"
-thumbnail: "./thumbnail.png"
+title: "React > How I use React's new context api"
 ---
 
 

@@ -1,9 +1,8 @@
 ---
 path: "/developer-diary-dev-log-1-projectiles"
 date: "2019-03-07T12:00:00.962Z"
-title: "Developer diary - dev log 1: Projectiles"
+title: "Developer diary > Devlog 1: Projectiles"
 description: "Let discover how to create projectile"
-thumbnail: "./thumbnail.jpg"
 draft: true
 ---
 
