@@ -19,8 +19,6 @@ const ContactContent = ({ active, handleChange }) => {
             className={styles.image}
             src={avatar}
             alt="picture of Luc-Frederic with an authentic canadian ww2 helmet"
-            height="225px"
-            width="226px"
           />
         </div>
         <div className={styles.description}>
