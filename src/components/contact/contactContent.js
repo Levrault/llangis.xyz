@@ -15,7 +15,7 @@ const ContactContent = ({ active, handleChange }) => {
     <div className={classnames(styles.container, { [styles.active]: active })}>
       <div className={styles.content}>
         <div className={styles.avatar}>
-          <img className={styles.image} src={avatar} alt="" />
+          <img className={styles.image} src={avatar} alt="picture of Luc-Frederic with an authentic canadian ww2 helmet" height="225px" />
         </div>
         <div className={styles.description}>
           <p className={styles.lead}>
