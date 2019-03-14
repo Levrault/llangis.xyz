@@ -11,7 +11,11 @@ import Title from '../components/title/title';
  * @class Index
  * @param {array} edges
  */
-const Index = ({ data: { allMarkdownRemark: { edges } } }) => {
+const Index = ({
+  data: {
+    allMarkdownRemark: { edges }
+  }
+}) => {
   const posts = edges.filter(edge => !!edge.node.frontmatter.date);
 
   return (
@@ -35,7 +39,10 @@ export default Index;
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { draft: { ne: true } } }
+    ) {
       edges {
         node {
           id
