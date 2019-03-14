@@ -1,5 +1,5 @@
 ---
-path: "/developer-diary-dev-log-0-i-adopted-Godot"
+path: "/developer-diary-devlog-0-i-adopted-Godot"
 date: "2019-03-04T12:00:00.962Z"
 title: "Developer diary > Devlog 0: I adopted Godot"
 description: "First develop diary entry"

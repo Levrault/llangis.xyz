@@ -1,5 +1,5 @@
 ---
-path: "/developer-diary-dev-log-1-projectiles"
+path: "/developer-diary-devlog-1-projectiles"
 date: "2019-03-14T8:00:00.962Z"
 title: "Developer diary > Devlog 1: Projectiles"
 description: "Let discover how to create projectile"
