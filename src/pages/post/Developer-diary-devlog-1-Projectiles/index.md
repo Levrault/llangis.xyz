@@ -40,7 +40,9 @@ Here a what my main scene look like and It's composed of
 
 - A node2D that host the physic2D script: similar to the one that I use in my Character scene, I created a second physic script that use move_and_collide instead of move_and_slide since my projectile don't need to...slide.
 
-  ```java
+  
+
+  ```c
   extends Node2D
   
   # physics
@@ -56,6 +58,8 @@ Here a what my main scene look like and It's composed of
   
   ```
 
+  
+
 - An Area2d:  Use to get when my projectile hits something. When it happen, it will trigger the *Death* animation state (make the projectile disappear after X seconds).
 
 - A Timer: Use to prevent the case scenario where my projectile never hit something. This timer is use to kill hit after X seconds.
@@ -64,7 +68,7 @@ Here a what my main scene look like and It's composed of
 
  
 
-```java
+```c
 extends KinematicBody2D
 
 const Damage = preload('res://character/weapons/Damage.gd')
@@ -134,7 +138,7 @@ Since I use a final state machine, creating and adding a new behavior to my char
 
 * Optional step, since this new state is a attack, I know it will need to cool down to prevent super saiyan combo attack. To manage my cool down, I set it through a dictionary. Why not a boolean ? I think with my future inventory system, access current equipped weapon through a dictionary should be the most efficient solution.
 
-```java
+```c
 onready var states_map = {
 	...
 	'AtkThrowSpear': $States/AtkThrowSpear,
@@ -166,7 +170,7 @@ Time to code my new state script (eg. `atk-throw-spear.gd`).  Every state inheri
 
 ### state.gd
 
-```java
+```c
 # Base class all states inherit from
 extends Node
 
@@ -210,7 +214,7 @@ func play_sound(host, stream):
 
 ### atk-throw-spear.gd
 
-```java
+```c
 extends 'res://character/states/state.gd'
 
 const ProjectilesFactory = preload('res://character/weapons/ProjectilesFactory.gd')

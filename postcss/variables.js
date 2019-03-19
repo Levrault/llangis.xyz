@@ -33,7 +33,7 @@ const layers = {
 
 // for media queries
 const viewport = {
-  'viewport-xsmall': '700px',
+  'viewport-xsmall': '672px',
   'viewport-small': '900px',
   'viewport-medium': '1285px',
   'viewport-large': '1600px',
