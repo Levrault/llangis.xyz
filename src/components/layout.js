@@ -10,7 +10,7 @@ import styles from './layout.module.css';
  * @param {node} children
  * @returns {node}
  */
-const Layout = ({ articleTitle, children }) => {
+const Layout = ({ article, children }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -51,19 +51,24 @@ const Layout = ({ articleTitle, children }) => {
           >
             <html className={styles.html} lang="en" />
 
-            {articleTitle && <title>{articleTitle}</title>}
-            {articleTitle && <meta property="og:title" content={articleTitle} />}
-            {articleTitle && <meta property="og:type" content="article" />}
+            {article.title && <title>{article.title}</title>}
+            {article.title && <meta property="og:title" content={article.title} />}
+            {article.title && <meta property="og:type" content="article" />}
+            {article.title && <meta property="og:type" content="article" />}
+            {article.description && <meta name="description" content={article.description} />}
+            {article.description && <meta name="og:description" content={article.description} />}
+            {article.keywords && <meta name="keywords" lang="en" content={article.keywords} />}
 
             {/* basic */}
             <meta charSet="utf-8" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-            <meta name="keywords" lang="en" content={keywords} />
+            {!article.keywords && <meta name="keywords" lang="en" content={`${keywords} blog, luc-frederic langis, levrault`} />}
             <meta name="author" lang="en" content={author} />
             <meta name="image" content={image} />
             <meta property="og:url" content={metaUrl} />
-            <meta property="og:description" content={description} />
-            <meta name="description" content={description} />
+            {!article.description && <meta property="og:description" content={description} />}
+            {!article.description && <meta name="description" content={description} />}
+            <meta name="copyright" content={author} />
 
             {/* apple */}
             <meta name="apple-mobile-web-app-title" content={metaUrl} />
@@ -89,8 +94,12 @@ const Layout = ({ articleTitle, children }) => {
 };
 
 Layout.propTypes = {
-  articleTitle: PropTypes.string,
+  article: PropTypes.object,
   children: PropTypes.node.isRequired
+};
+
+Layout.defaultProps = {
+  article: {}
 };
 
 export default Layout;

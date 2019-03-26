@@ -12,9 +12,9 @@ import ContactBlock from '../components/contact/contactBlock';
  */
 export default function BlogTemplate ({ data }) {
   const { markdownRemark } = data;
-  const { frontmatter: { title, date }, html } = markdownRemark;
+  const { frontmatter, frontmatter: { title, date }, html } = markdownRemark;
   return (
-    <Layout articleTitle={title}>
+    <Layout article={frontmatter}>
       <HomeLink />
       <div className="blog-post">
         <h1>{title}</h1>
@@ -42,6 +42,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        description
+        keywords
       }
     }
   }

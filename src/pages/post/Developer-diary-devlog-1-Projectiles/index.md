@@ -3,6 +3,7 @@ path: "/developer-diary-devlog-1-projectiles"
 date: "2019-03-07T12:00:00.962Z"
 title: "Developer diary > Devlog 1: Projectiles"
 description: "Let discover how to create projectile"
+keywords: "devlog, Godot, GDScript, projectiles, object pooling, final state machine"
 draft: false
 ---
 
