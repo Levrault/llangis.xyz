@@ -7,23 +7,23 @@ keywords: "devlog, godot, godot engine, diving, one way platform, animation, GDS
 draft: false
 ---
 
-Hi folks ! If you read this, you already know the drill, it's time for a new devlog. This week, I got the opportunity to go to my first meet-up and meet the amazing [Nathan from GDquest](https://www.gdquest.com/). I also added some new animations to the game like diving through a platform and ledge grabbing. Finally, I made some refactoring on my animation manager.
+Hi folks ! If you read this, you already know the drill, it's time for a new devlog. This week, I got the opportunity to go to my first meet-up and meet the amazing [Nathan from GDquest](https://www.gdquest.com/). I also added some new animations to the game like diving through a platform and ledge grabbing. Finally, I did some refactoring on my animation manager.
 
 ## Monthly Paris Indie Game Dev Meetup
 
-Ah! my first video game developer meet-up. It's was pretty great, meet a lots of people that are in or interested by the video game development. I also got the chance to chat with Nathan from GDquest and learn about how he decide to teach Godot and also talk about my user experience with Godot (great so far).
+Ah! My first video game developer meet-up. It's been pretty great, meet a lot of people that are in or interested by the video game development. I also got the chance to chat with [Nathan from GDquest](https://www.gdquest.com/) and learn about how he decide to teach Godot and also talk about my user experience with Godot (great so far).
 
 ![1554275075641](./otaku_bar.png)
 
-Nothing much to said about the meet-up, I will surely attempt the next one.
+Nothing much to say about the meet-up, I will surely attempt the next one.
 
 ## Let's dive and climb
 
 ### Diving through platform
 
-The greatest advantage with Godot, it's certainly about his out of the box tools. If I want a one way platform, I simply need to check `one way collision` and we're done. Don't need to work for two one hours to add your own one way collider, it's already there ! In 1 minutes, my character can jump through the platform and land on it. Pretty easy ! But, there is alway a but, if I want my character to pass though this platform by pressing `down + jump`, I need to write a little bit of code.
+The greatest advantage with Godot, it's certainly about his out of the box tools. If I want a one way platform, I simply need to check `one way collision` and we're done. Don't need to work for two one hours to add your own one way collider, it's already there ! In 1 minutes, my character can jump through the platform and land on it. Pretty easy ! But, there is always a but, if I want my character to pass though this platform by pressing `down + jump`, I need to write a little bit of code.
 
-Thankfully, thing are still pretty easy. First of all, if I want to play my diving animation, my character will need be in the `crouch state`. When he is on it, I can make it switch to the divekick animation with the combination key `down + jump` and let him pass through the platform.
+Thankfully, things are still pretty easy. First of all, if I want to play my diving animation, my character will need to be in the `crouch state`. When he is on it, I can make it switch to the divekick animation with the combination key `down + jump` and let him pass through the platform.
 
 
 
@@ -47,7 +47,7 @@ func _on_animation_finished(anim_name: String) -> void:
     emit_signal('finished', 'Fall')
 ```
 
-I think you can guest it by reading the code, I put my one-way-platform on a specific layer and mask (I named it one way platform, so original). I simply remove the collision mask when my character is on the `divekick` state. At the same time, the one way platform check if the character has exited his area to reset the collision mask to true.
+I think you can guest it by reading the code, I put my one-way-platform on a specific layer and mask (I named it one way platform, so original). I simply remove the collision mask when my character is on the `divekick` state. At the same time, the one way platform checks if the character has exited his area to reset the collision mask to true.
 
 ```c
 extends StaticBody2D
@@ -79,13 +79,13 @@ Second new animations, ledge grabbing. Nothing really complex, I simply created 
 
 When entering the area, the following code will keep a trace of the
 
-- Cliff anchor, where the character need to stay in the ledge hang state.
+- Cliff anchor, where the character need to stay on the ledge hang state.
 
-- Destination anchor, where he is gonna land.
+- Destination anchor, where he is going to land.
 
   
 
-and the Climbable area, will set some inner state variables to active the ledge climbing mode.
+And the Climbable area, will set some inner state variables to active the ledge climbing mode.
 
 ```c
 extends StaticBody2D
@@ -104,7 +104,7 @@ func _on_ClimbableArea_body_exited(body: Object) -> void:
 
 ```
 
-With all this conditions meet, the character will transit to the `ledge hang` state.
+With all these conditions meet, the character will transit to the `ledge hang` state.
 
 ```c
 extends InAir
@@ -156,7 +156,7 @@ Finally, the animation plays, the character set his new position to the destinat
 
 ## Refactoring
 
-This is gonna be quick. Like I already explain in my [previous entry](https://llangis.xyz/developer-diary-devlog-2-attacks-and-godot-3.1), I work with multiple sprite sheets. I set them in the node called Animations. I simply moved every sprite inside the state node. It more logical this way since I don't need search the corresponding sprite sheets every time I made some change on a state.
+This is gonna be quick. Like Like I have already explained in my [previous entry](https://llangis.xyz/developer-diary-devlog-2-attacks-and-godot-3.1), I work with multiple sprite sheets. I set them in the node called Animations. I simply moved every sprite inside the state node. It's more logical this way since I don't need to search the corresponding sprite sheets every time I made some change on a state.
 
 ![states and animations](./states_and_animations.png)
 
