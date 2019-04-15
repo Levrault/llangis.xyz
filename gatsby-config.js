@@ -3,14 +3,14 @@ const postCSSConfig = require('./postcss.config');
 module.exports = {
   siteMetadata: {
     title: 'llangis.xyz',
-    titleTemplate: '%s · Luc-Frederic Langis',
+    titleTemplate: '%s · Luc-Frédéric Langis',
     siteUrl: 'https://llangis.xyz',
     metaUrl: 'llangis.xyz',
     author: 'Luc-Frédéric Langis',
     twitterUsername: '@LFLangis',
     description: 'Blog of a Front End Software Development Engineer and amateur video game dev',
     image: '/icons/icon-48x48.png',
-    keywords: 'llangis luc-frederic langis react web unity godot krita javascript css front-end'
+    keywords: 'llangis luc-frédéric luc-frederic langis react web unity godot javascript css front-end gamedev godotengine'
   },
   plugins: [
     {
