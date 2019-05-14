@@ -24,6 +24,9 @@ const typography = new Typography({
       'pre, img': {
         'border-radius': '10px'
       },
+      'img': {
+        width: '100%'
+      },
       'div.gatsby-highlight': {
         'margin-bottom': '1.31951rem'
       }
