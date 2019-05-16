@@ -13,6 +13,10 @@ const typography = new Typography({
   ],
   bodyFontFamily: ['Georgia', 'serif'],
   overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
+    'blockquote': {
+      'padding-left': '1.666rem',
+      'border-left': '2px solid #dadce0'
+    },
     '@media screen and (max-width: 672px)': {
       'div.gatsby-highlight': {
         'margin-right': '-1.3125rem',

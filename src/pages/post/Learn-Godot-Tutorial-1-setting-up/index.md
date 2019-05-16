@@ -26,8 +26,7 @@ Here a [great article](https://kano.me/blog/my-thoughts-on-very-low-resolution/)
 
 ![celeste](./celeste.jpg)
 
-> Celeste
->
+> *Celeste*
 
 ## How to set up Godot's project settings for a pixel-perfect game
 
@@ -45,18 +44,18 @@ But what happens when you stretch a game that got a different aspect ratio ? E.G
 
 ![momodora](momodora.jpg)
 
-> Momodora: Reverie Under The Moonlight, a 4:3 aspect ratio game that put two black borders to keep the good aspect ratio on a 16:9 screen
+> *Momodora: Reverie Under The Moonlight, a 4:3 aspect ratio game that put two black borders to keep the good aspect ratio on a 16:9 screen*
 
 Alright, now that we all know how ratio works, how it's gonna be applied with the action adventure platformer demo ? For the demo, I choose the 480x270 native resolution based on one of the tweet (couldn't find the original tweet) of [Thomas or Mr. Helmut](https://twitter.com/mrhelmut) (developer at [Flying Oak Games](https://twitter.com/FlyingOakGames)).
 
-> What about #ScourgeBringer?
-> It uses a 480x270 scene, which means it will look perfect at 1080p and 2160p.
+> *What about #ScourgeBringer?*
+> *It uses a 480x270 scene, which means it will look perfect at 1080p and 2160p.*
 >
-> And it will have a switchable pixel perfect mode for the other resolutions. You will be able to have a fullscreen game, or having slight margins with perfect pixels.
+> *And it will have a switchable pixel perfect mode for the other resolutions. You will be able to have a fullscreen game, or having slight margins with perfect pixels.*
 >
-> 320x180 is the perfect situation, it gets a round ratio on 720p, 1080p, 1440p, and 2160p.
+> *320x180 is the perfect situation, it gets a round ratio on 720p, 1080p, 1440p, and 2160p.*
 >
-> 320x180 and 640x360 are the safest.
+> *320x180 and 640x360 are the safest.*
 
 ### Configure Godot
 
@@ -72,7 +71,7 @@ So, now that the perfect native resolution has been chosen, it's time to open Go
 
 It's almost over, we just need to activate the *Use Pixel Snap* options. You will find it in *Rendering > Quality > 2D > Use Pixel Snap*.
 
-![pixel snap](/home/llangis/Devs/llangis.xyz/src/pages/post/Learn-Godot-Tutorial-1-setting-up/pixel_snap.png)
+![pixel snap](./pixel_snap.png)
 
 A quick definition for pixel snap would certainly be *"it forbid half pixel rendering"*. Let just say that if your X axes sprite coordinate is 0.5, the engine will render only the half of a pixel and it will break your wonderful pixel sprite. It's also prevents some images distortion when a sprite is rotated.
 
@@ -84,7 +83,7 @@ Let test that, download the sprite of our hero, just right here [Animated Pixel 
 
 Create a new scene, add a sprite node and set the hero sprite has texture. You can also change the **vframes** to 16 and the **hFrames** set to 7 to only show the hero and not the complete sprite sheet. Now that this is done, you can see that our sprite is blurry.
 
-![1557925476117](/home/llangis/Devs/llangis.xyz/src/pages/post/Learn-Godot-Tutorial-1-setting-up/import.png)
+![import pixel art](./import.png)
 
 Let's fix that, 
 
