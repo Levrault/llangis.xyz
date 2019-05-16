@@ -4,7 +4,7 @@ date: "2019-05-16T12:00:00.962Z"
 title: "Learn Godot > Tutorial 1 - Settings up for pixel art"
 description: "How to prepare your project to be pixel perfect"
 keywords: "Godot, GDScript, tutorial, action, adventure, platformer, pixel art, editor, import"
-draft: true
+draft: false
 ---
 
 Alright folks, here my first tutorial ever. Since the demo is an action adventure platformer in **pixel art**, the project will need a specific configuration to make it work the way we want.
