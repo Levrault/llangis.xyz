@@ -81,7 +81,13 @@ Even if the project configuration is done, there still a last little thing to kn
 
 Let test that, download the sprite of our hero, just right here [Animated Pixel Adventurer](https://rvros.itch.io/animated-pixel-hero) (and feel free to thank his author) and create a new Godot project or simply download this [example](https://github.com/Levrault/godot-2d-action-adventure-platformer-demo/tree/master/learn-godot-1-setting-up-for-pixel-art).
 
-Create a new scene, add a sprite node and set the hero sprite has texture. You can also change the **vframes** to 16 and the **hFrames** set to 7 to only show the hero and not the complete sprite sheet. Now that this is done, you can see that our sprite is blurry.
+
+
+*UPDATE: thanks to Varx511 from reddit for telling me that the sprite for itch.io is not the same size that the one that I use.  I would recommend to resize the sprite sheet to 350x592 instead of his native 385x592 size. If you don't resize it, it will not display properly when you change the animation hframe value. You can also directly download the resized sprite from my [github](https://github.com/Levrault/godot-2d-action-adventure-platformer-demo/blob/master/demo/characters/player/sprites/adventurer-v1.5-Sheet.png) but it's alway better to directly download it from the author website to thank him.*
+
+
+
+Create a new scene, add a sprite node and set the hero sprite has texture. You can also change the **vframes** to 16 and the **hframes** set to 7 to only show the hero and not the complete sprite sheet. Now that this is done, you can see that our sprite is blurry.
 
 ![import pixel art](./import.png)
 
