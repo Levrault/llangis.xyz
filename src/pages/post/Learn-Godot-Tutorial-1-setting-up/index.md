@@ -83,7 +83,7 @@ Let test that, download the sprite of our hero, just right here [Animated Pixel 
 
 
 
-*UPDATE: thanks to Varx511 from reddit for telling me that the sprite for itch.io is not the same size that the one that I use.  I would recommend to resize the sprite sheet to 350x592 instead of his native 385x592 size. If you don't resize it, it will not display properly when you change the animation hframe value. You can also directly download the resized sprite from my [github](https://github.com/Levrault/godot-2d-action-adventure-platformer-demo/blob/master/demo/characters/player/sprites/adventurer-v1.5-Sheet.png) but it's alway better to directly download it from the author website to thank him.*
+*UPDATE: thanks to Varx511 from reddit for telling me that the sprite for itch.io is not the same size that the one that I use.  I would recommend to resize the sprite sheet to 350x592 instead of his native 385x592 size. If you don't resize it, it will not display properly when you change the animation hframe value. You can also directly download the resized sprite from my [github](https://github.com/Levrault/godot-2d-action-adventure-platformer-demo/blob/master/demo/characters/player/sprites/adventurer-v1.5-Sheet.png) but it's alway better to get it from the author website to thank him.*
 
 
 
