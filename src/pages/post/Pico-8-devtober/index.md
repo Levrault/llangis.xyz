@@ -4,9 +4,8 @@ date: "2019-10-20T10:15:00.962Z"
 title: "Post mortem for #devtober 20019"
 description: "How I discover Pico 8 and Lua"
 keywords: "pico8, pico, devtober, #devtober, lua, pixel art, gamedev"
+cartridge: "/bbs/widget.php?pid=jewakadepa-1"
 ---
-
-*Sieur Lacassagne Dungeon is available [here](https://www.lexaloffle.com/bbs/?tid=35777)*
 
 Ah October, month of spookiness and for month long hashtag challenge like #devtober. For those who are not aware of what #devtober is, it's a challenge created by [ThisIsEllian](https://twitter.com/ThisIsEllian) and it the same thing as #inktober except you work on your game every day of October instead of your drawing. They are three simples rules
 
