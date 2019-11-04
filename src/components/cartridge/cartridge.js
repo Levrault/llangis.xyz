@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styles from './cartridge.module.css';
 
@@ -8,7 +8,17 @@ import styles from './cartridge.module.css';
  * @param {string} src
  */
 const Cartridge = ({ src }) => (
-  <iframe src={`https://www.lexaloffle.com/${src}`} className={styles.container} allowFullScreen width="621" height="513" />
+  <Fragment>
+    <div className={styles.mobile}>
+      <p>
+        You can play Sieur Lacassagne Dungeon on your mobile device by clicking on the folling link
+        <a className={styles.text} href={`/pico8/${src}/index.html`} target="_blank">
+        Sieur Lacassagne Dungeon
+        </a>
+      </p>
+    </div>
+    <iframe src={`/pico8/${src}/index.html`} className={styles.p8container} allowFullScreen />
+  </Fragment>
 );
 
 
