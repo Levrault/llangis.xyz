@@ -169,6 +169,16 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
-    'gatsby-plugin-netlify' // make sure to put last in the array
+    {
+      resolve: 'gatsby-plugin-netlify', // make sure to put last in the array
+      options: {
+        headers: {
+          '/*': [
+            'X-Frame-Options: ALLOW-FROM https://llangis.xyz/'
+          ]
+        },
+        mergeSecurityHeaders: true
+      }
+    }
   ]
 };
