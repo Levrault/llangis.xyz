@@ -7,6 +7,7 @@
 // You can delete this file if you're not using it
 
 const path = require('path');
+const express = require('express');
 const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.createPages = ({ actions, graphql }) => {
@@ -55,4 +56,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value
     });
   }
+};
+
+
+exports.onCreateDevServer = ({ app }) => {
+  app.use(express.static('public'));
 };
