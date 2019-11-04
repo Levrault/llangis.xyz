@@ -1,0 +1,6 @@
+.container {
+  display: block;
+  margin: resolve($space-xl + $space-m) 0 $space-m;
+  position: relative;
+  text-decoration: none;
+}

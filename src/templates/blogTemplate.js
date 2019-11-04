@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import ArticleHeader from '../components/article/articleHeader';
 import HomeLink from '../components/link/homeLink';
 import ContactBlock from '../components/contact/contactBlock';
 import Cartridge from '../components/cartridge/cartridge';
@@ -17,7 +18,7 @@ export default function BlogTemplate ({ data }) {
   console.log('cartridge', cartridge); //TODO: to remove
   return (
     <Layout article={frontmatter}>
-      <HomeLink />
+      <ArticleHeader />
       <div className="blog-post">
         <h1>{title}</h1>
         <h2>{date}</h2>
