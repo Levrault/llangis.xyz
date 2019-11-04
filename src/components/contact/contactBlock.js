@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
-import classnames from 'classnames';
-import { CSSTransition } from 'react-transition-group';
+import React from 'react';
 import { IoLogoTwitter, IoLogoLinkedin, IoLogoGithub, IoIosMail } from 'react-icons/io';
-import TRANSITION from '../../animations/cssTransitionState';
 import ContactsInfoList from './contactsInfoList';
 import ContactContent from './contactContent';
 import styles from './contactBlock.module.css';
@@ -13,8 +10,6 @@ import styles from './contactBlock.module.css';
  * @returns {node}
  */
 const ContactBlock = () => {
-  const [contactsFlag, setContactsFlag] = useState(TRANSITION.UNMOUNTED);
-  const primaryActions = contactsFlag === TRANSITION.UNMOUNTED ? TRANSITION.ENTER : TRANSITION.UNMOUNTED;
   const contacts = [
     {
       color: '#c71610',
@@ -47,27 +42,10 @@ const ContactBlock = () => {
   ];
 
   return (
-    <div className={classnames(styles.container, { [styles.active]: contactsFlag !== TRANSITION.UNMOUNTED })}>
+    <div className={styles.container}>
       <div className={styles.content}>
-
-        <ContactContent
-          active={contactsFlag !== TRANSITION.UNMOUNTED}
-          handleChange={() => setContactsFlag(primaryActions)}
-        />
-
-        <CSSTransition
-          in={contactsFlag === TRANSITION.ENTER}
-          classNames={{
-            enter: classnames(styles.hiddenFooter, styles.enter),
-            enterDone: classnames(styles.hiddenFooter, styles.enterDone),
-            exit: classnames(styles.hiddenFooter, styles.exit)
-          }}
-          timeout={150}
-          unmountOnExit
-        >
-          <ContactsInfoList contacts={contacts} />
-        </CSSTransition>
-
+        <ContactContent />
+        <ContactsInfoList contacts={contacts} />
       </div>
     </div>
   );

@@ -1,5 +1,3 @@
-/* @see https://codemyui.com/contact-card-profile-card-animation/ */
-
 .container {
   min-height: 450px;
   overflow: hidden;
@@ -22,29 +20,8 @@
   position: relative;
   z-index: $background;
 
-  &.enter {
-    transform: translateX(-400px);
-    transition: .5s;
-  }
-
-  &.enterDone {
-    transition: .5s;
-    z-index: $foreground;
-  }
-
-  &.exit {
-    transform: translateX(-400px);
-    transition: .5s;
-  }
-
   @media screen and (min-width: $viewport-xsmall) {
     left: 0;
     position: absolute;
-
-    &.enterDone {
-      bottom: -88px;
-      transition: .5s;
-      z-index: $foreground;
-    }
   }
 } 

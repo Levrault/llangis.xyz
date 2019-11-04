@@ -1,18 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import { MdExpandLess } from 'react-icons/md';
 import avatar from '../../images/avatar.webp';
-import PrimaryButton from '../button/primaryButton';
 import styles from './contactContent.module.css';
 
 /**
  * @class ContactContent
  * @param {bool} active
  */
-const ContactContent = ({ active, handleChange }) => {
+const ContactContent = () => {
   return (
-    <div className={classnames(styles.container, { [styles.active]: active })}>
+    <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.avatar}>
           <img
@@ -35,23 +31,10 @@ const ContactContent = ({ active, handleChange }) => {
           </p>
         </div>
       </div>
-
-      <div className={classnames(styles.footer, { [styles.active]: active })}>
-        <PrimaryButton
-          aria-label="show social link"
-          className={styles.primaryButton}
-          onClick={handleChange}
-        >
-          {!active ? 'Contact me' : <MdExpandLess />}
-        </PrimaryButton>
-      </div>
     </div>
   );
 };
 
-ContactContent.propTypes = {
-  active: PropTypes.bool,
-  handleChange: PropTypes.func.isRequired
-};
+ContactContent.propTypes = {};
 
 export default ContactContent;

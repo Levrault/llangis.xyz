@@ -1,19 +1,12 @@
 .container {
   border-radius: resolve($space-m + $space-s);
-  margin-bottom: resolve($space-xl + $space-s);
+  margin-bottom: $space-s;
   position: relative;
   transition: 1s;
   width: 100%;
   z-index: $foreground;
-
-  &.active {
-    border-radius: resolve($space-m + $space-s) resolve($space-m + $space-s) 0 0;
-    box-shadow: none;
-  }
-
-  @media screen and (min-width: $viewport-xsmall) {
-    margin-bottom: resolve($space-xl + $space-l);
-  }
+  border-radius: $space-m $space-m 0 0;
+  box-shadow: none;
 }
 
 .content {
@@ -90,30 +83,9 @@
   transition: 1s;
   width: 100%;
 
-  &.active {
-    transition: 1s;
-    z-index: $middleground;
-
-    .primaryButton {
-      @mixin boxShadow s;
-
-      font-size: 3rem;
-      height: $space-xl;
-      padding: 5px;
-      transform: translateX(108px);
-      width: $space-xl;
-    }
-  }
-
   @media screen and (min-width: $viewport-xsmall) {
     left: auto;
     margin: 0;
     width: 640px;
-
-    &.active {
-      .primaryButton {
-        transform: translateX(200px);
-      }
-    }
   }
 }

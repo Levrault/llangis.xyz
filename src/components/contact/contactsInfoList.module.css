@@ -1,4 +1,8 @@
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+
+  @media screen and (min-width: $viewport-xsmall) {
+    justify-content: flex-start;
+  }
 }
