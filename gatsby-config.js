@@ -170,11 +170,11 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     'gatsby-plugin-offline',
     {
-      resolve: 'gatsby-plugin-netlify', // make sure to put last in the array
+      resolve: 'gatsby-plugin-netlify',
       options: {
         headers: {
           '/*': [
-            'X-Frame-Options: ALLOW-FROM https://llangis.xyz/'
+            'X-Frame-Options: SAMEORIGIN'
           ]
         },
         mergeSecurityHeaders: true
