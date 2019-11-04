@@ -3,7 +3,7 @@
     border: none;
     overflow: hidden;
     height: 513px;
-    width: 625px;
+    width: 670px;
 
     @media screen and (min-width: $viewport-xsmall) {
       display: block;
