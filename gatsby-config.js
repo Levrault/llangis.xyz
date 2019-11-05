@@ -175,14 +175,14 @@ module.exports = {
         background_color: '#02a3ee',
         theme_color: '#80d1f7',
         display: 'standalone',
-        icon: 'src/images/favicon.jpg', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.jpg',
         crossOrigin: 'use-credentials'
       }
     },
     {
       resolve: 'gatsby-plugin-offline',
       options: {
-        precachePages: ['/static/*', '/src/pages/*']
+        precachePages: ['pico8/*']
       }
     },
     {

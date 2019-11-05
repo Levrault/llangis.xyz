@@ -10,6 +10,34 @@ const path = require('path');
 const express = require('express');
 const { createFilePath } = require('gatsby-source-filesystem');
 
+exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions
+}) => {
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+
+        {
+          test: /\.(html)$/,
+          use: {
+            loader: 'html-loader',
+            options: {
+              attrs: [':data-src']
+            }
+          }
+        }
+      ]
+    },
+    output: {
+      publicPath: 'https://llangis.xyz/[hash]/'
+    }
+  });
+};
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
@@ -40,7 +68,7 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
-        context: {} // additional data can be passed via context
+        context: {}
       });
     });
   });

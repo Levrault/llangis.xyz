@@ -1,0 +1,22 @@
+.p8container {
+  display: none;
+  border: none;
+  width: 670px;
+
+  @media screen and (min-width: $viewport-xsmall) {
+    display: block;
+  }
+}
+
+.mobile {
+  font-weight: bold;
+
+  @media screen and (min-width: $viewport-xsmall) {
+    display: none;
+  }
+}
+
+.text {
+  display: block;
+  margin-top: $space-m;
+}
