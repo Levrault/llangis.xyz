@@ -9,7 +9,7 @@ require('prismjs/themes/prism-tomorrow.css');
 
 exports.onServiceWorkerUpdateReady = () => {
   const answer = window.confirm(
-    'This application has been updated. ' +
+    'llangis.xyz has been updated. ' +
       'Reload to display the latest version?'
   );
 

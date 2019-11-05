@@ -166,7 +166,25 @@ module.exports = {
         ]
       }
     },
-    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'llangis.xyz',
+        short_name: 'langis',
+        start_url: '/',
+        background_color: '#02a3ee',
+        theme_color: '#80d1f7',
+        display: 'standalone',
+        icon: 'src/images/favicon.jpg', // This path is relative to the root of the site.
+        crossOrigin: 'use-credentials'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-offline',
+      options: {
+        precachePages: ['/static/*', '/src/pages/*']
+      }
+    },
     {
       resolve: 'gatsby-plugin-netlify',
       options: {
