@@ -5,7 +5,7 @@ import Layout from '../components/layout';
 import ArticleHeader from '../components/article/articleHeader';
 import HomeLink from '../components/link/homeLink';
 import ContactBlock from '../components/contact/contactBlock';
-import Cartridge from '../components/cartridge/cartridge';
+import Pico8Player from '../components/pico8player/pico8player';
 
 /**
  * Blog template
@@ -15,14 +15,13 @@ import Cartridge from '../components/cartridge/cartridge';
 export default function BlogTemplate ({ data }) {
   const { markdownRemark } = data;
   const { frontmatter, frontmatter: { title, date, cartridge }, html } = markdownRemark;
-  console.log('cartridge', cartridge); //TODO: to remove
   return (
     <Layout article={frontmatter}>
       <ArticleHeader />
       <div className="blog-post">
         <h1>{title}</h1>
         <h2>{date}</h2>
-        {cartridge && <Cartridge src={cartridge} />}
+        {cartridge && <Pico8Player cartridge={cartridge} />}
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
