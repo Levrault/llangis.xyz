@@ -40,7 +40,7 @@ class Pico8GameShell extends Component {
    * Init pico 8 script
    */
   initCartridge = () => {
-    window.cartridge = `${this.props.cartridge}.js`;
+    window.cartridge = `/pico8/${this.props.cartridge}.js`;
     const s = document.createElement('script');
     s.type = 'text/javascript';
     s.src = '/pico8/pico8.js';
