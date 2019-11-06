@@ -486,7 +486,6 @@ function p8_request_fullscreen() {
     document.webkitIsFullScreen ||
     document.msFullscreenElement
 
-  var container = document.getElementById('p8_gameshell')
   if (is_fullscreen) {
     if (document.exitFullscreen) {
       document.exitFullscreen()
@@ -497,12 +496,10 @@ function p8_request_fullscreen() {
     } else if (document.msExitFullscreen) {
       document.msExitFullscreen()
     }
-    container.classList.remove('fullscreen')
     return
   }
 
   var el = document.getElementById('p8_playarea')
-  container.classList.add('fullscreen')
 
   if (el.requestFullscreen) {
     el.requestFullscreen()

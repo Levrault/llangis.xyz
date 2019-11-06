@@ -1,21 +1,13 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import styles from './pico8gameshell.module.css';
 import pico8HTML from '../../../static/pico8/pico8.html';
 
 /**
  * Pico8 Gameshell
  */
-class Pico8GameShell extends Component {
-  /**
-   * @contructor
-   * @param {object} props
-   */
-  constructor (props) {
-    super(props);
-    this.state = {};
-  }
-
+class Pico8GameShell extends PureComponent {
   /**
    * add pico 8 script
    */
@@ -52,12 +44,13 @@ class Pico8GameShell extends Component {
    * @returns {node}
    */
   render () {
-    return <div className={styles.container} dangerouslySetInnerHTML={{ __html: pico8HTML }} />;
+    return <div className={classnames(styles.container, { [styles.fullscreen]: this.props.fullscreen })} dangerouslySetInnerHTML={{ __html: pico8HTML }} />;
   }
 }
 
 Pico8GameShell.propTypes = {
-  cartridge: PropTypes.string
+  cartridge: PropTypes.string,
+  fullscreen: PropTypes.bool
 };
 
 export default Pico8GameShell;

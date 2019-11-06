@@ -6,6 +6,7 @@
   @media screen and (min-width: $viewport-xsmall) {
     display: block;
   }
+
 }
 
 .mobile {
