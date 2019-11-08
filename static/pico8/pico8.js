@@ -274,28 +274,28 @@ function p8_update_layout() {
     var h = window.innerHeight
 
     // doesn't work -- viewport changes size according to
-    //var w = document.body.clientWidth;
-    //var h = document.body.clientHeight;
+    // var w = document.body.clientWidth;
+    // var h = document.body.clientHeight;
 
     var r = Math.min(w, h) / 12
 
     if (r > 40) r = 40
 
     el = document.getElementById('controls_right_panel')
-    el.style.left = w - r * 6
-    el.style.top = h - r * 7
-    el.style.width = r * 6
-    el.style.height = r * 7
+    el.style.left = w - r * 6 + 'px'
+    el.style.top = h - r * 7 + 'px'
+    el.style.width = r * 6 + 'px'
+    el.style.height = r * 7 + 'px'
     if (el.getAttribute('src') != p8_gfx_dat['controls_right_panel']) {
       // optimisation: avoid reload? (browser should handle though)
       el.setAttribute('src', p8_gfx_dat['controls_right_panel'])
     }
 
     el = document.getElementById('controls_left_panel')
-    el.style.left = 0
-    el.style.top = h - r * 6
-    el.style.width = r * 6
-    el.style.height = r * 6
+    el.style.left = 0 + 'px'
+    el.style.top = h - r * 6 + 'px'
+    el.style.width = r * 6 + 'px'
+    el.style.height = r * 6 + 'px'
     if (el.getAttribute('src') != p8_gfx_dat['controls_left_panel']) {
       // optimisation: avoid reload? (browser should handle though)
       el.setAttribute('src', p8_gfx_dat['controls_left_panel'])
@@ -486,7 +486,6 @@ function p8_request_fullscreen() {
     document.webkitIsFullScreen ||
     document.msFullscreenElement
 
-  var container = document.getElementById('p8_gameshell')
   if (is_fullscreen) {
     if (document.exitFullscreen) {
       document.exitFullscreen()
@@ -497,12 +496,10 @@ function p8_request_fullscreen() {
     } else if (document.msExitFullscreen) {
       document.msExitFullscreen()
     }
-    container.classList.remove('fullscreen')
     return
   }
 
   var el = document.getElementById('p8_playarea')
-  container.classList.add('fullscreen')
 
   if (el.requestFullscreen) {
     el.requestFullscreen()
@@ -513,22 +510,22 @@ function p8_request_fullscreen() {
   }
 }
 
-p8_update_layout();
-p8_update_button_icons();
+p8_update_layout()
+p8_update_button_icons()
 
-var canvas = document.getElementById('canvas');
-Module = {};
-Module.canvas = canvas;
+var canvas = document.getElementById('canvas')
+Module = {}
+Module.canvas = canvas
 
 // from @ultrabrite's shell: test if an AudioContext can be created outside of an event callback.
 // If it can't be created, then require pressing the start button to run the cartridge
 
 if (p8_autoplay) {
-  var temp_context = new AudioContext();
-  temp_context.onstatechange = function () {
+  var temp_context = new AudioContext()
+  temp_context.onstatechange = function() {
     if (temp_context.state == 'running') {
-      p8_run_cart();
-      temp_context.close();
+      p8_run_cart()
+      temp_context.close()
     }
-  };
+  }
 }

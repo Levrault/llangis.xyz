@@ -26,13 +26,12 @@ class Pico8Player extends Component {
   */
   render () {
     const { cartridge } = this.props;
-    console.log('src', cartridge); //TODO: to remove
     return (
       <Fragment>
         <div className={styles.mobile}>
           <p>
               You can play Sieur Lacassagne Dungeon on your mobile device by clicking on the folling link
-            <Link className={styles.text} to={'/pico8'}>
+            <Link className={styles.text} to={'/pico8reader'}>
               Sieur Lacassagne Dungeon
             </Link>
           </p>

@@ -1,8 +1,43 @@
 .container {
+  position: relative;
+}
+
+.p8container {
   padding: 0;
-  margin: 0;
-  background-color: #000;
+  margin: 0 0 $space-m 0;
   color: #ccc;
   height: 512px;
+  max-height: 512px;
   position: relative;
+
+  &.fullscreen {
+    background-color: none;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    margin: auto;
+  }
+}
+
+.coverContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+.cover {
+  top:0;
+  width: 512px;
+  height: 512px;
+  opacity: .9;
+
+  @media screen and (max-width: 800px) {
+    width: 100vw;
+    height: 100vw;
+  }
 }
