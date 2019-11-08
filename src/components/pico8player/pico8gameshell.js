@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import styles from './pico8gameshell.module.css';
@@ -33,10 +33,10 @@ class Pico8GameShell extends PureComponent {
    */
   initCartridge = () => {
     window.cartridge = `/pico8/${this.props.cartridge}.js`;
-    const s = document.createElement('script');
-    s.type = 'text/javascript';
-    s.src = '/pico8/pico8.js';
-    document.body.prepend(s);
+    const pico8js = document.createElement('script');
+    pico8js.type = 'text/javascript';
+    pico8js.src = '/pico8/pico8.js';
+    document.body.appendChild(pico8js);
   }
 
   /**
@@ -44,7 +44,19 @@ class Pico8GameShell extends PureComponent {
    * @returns {node}
    */
   render () {
-    return <div className={classnames(styles.container, { [styles.fullscreen]: this.props.fullscreen })} dangerouslySetInnerHTML={{ __html: pico8HTML }} />;
+    const { fullscreen, cartridge } = this.props;
+
+    return (
+      <div className={styles.container}>
+        <div className={styles.coverContainer}>
+          <img className={styles.cover} src={`/pico8/${cartridge}.png`} />
+        </div>
+        <div
+          className={classnames(styles.p8container, { [styles.fullscreen]: fullscreen })}
+          dangerouslySetInnerHTML={{ __html: pico8HTML }}
+        />
+      </div>
+    );
   }
 }
 

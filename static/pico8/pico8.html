@@ -16,7 +16,7 @@
 
   .p8_menu_buttons {
     height: 512px;
-    margin-left: -16px;
+    margin-left: -24px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -75,7 +75,6 @@
 
   .touch_controls_gfx {
     pointer-events: none;
-    position: relative;
     border: 0;
     width: 100vw;
     height: 100vh;
@@ -113,11 +112,17 @@
   }
 
   @media screen and (max-width: 800px) {
+    #p8_playarea {
+      margin-top: 40px;
+    }
     .p8_gameshell {
       min-height: 100vh;
     }
     .p8_menu_buttons {
       display: none;
+    }
+    .p8_menu_button {
+      margin-top: 8px;
     }
     canvas {
       width: 100vh;

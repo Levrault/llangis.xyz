@@ -26,7 +26,6 @@ class Pico8Player extends Component {
   */
   render () {
     const { cartridge } = this.props;
-    console.log('src', cartridge); //TODO: to remove
     return (
       <Fragment>
         <div className={styles.mobile}>
