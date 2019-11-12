@@ -61,7 +61,7 @@ const Layout = ({ article, children }) => {
 
             {/* basic */}
             <meta charSet="utf-8" />
-            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             {!article.keywords && <meta name="keywords" lang="en" content={`${keywords} blog, luc-frederic langis, levrault`} />}
             <meta name="author" lang="en" content={author} />
             <meta name="image" content={image} />
