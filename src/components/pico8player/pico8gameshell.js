@@ -1,8 +1,8 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
 import styles from './pico8gameshell.module.css';
-import pico8HTML from '../../../static/pico8/pico8.html';
+import pico8Mobile from '../../../static/pico8/pico8-mobile.html';
+import pico8Browser from '../../../static/pico8/pico8-browser.html';
 
 /**
  * Pico8 Gameshell
@@ -32,10 +32,16 @@ class Pico8GameShell extends PureComponent {
    * Init pico 8 script
    */
   initCartridge = () => {
-    window.cartridge = `/pico8/${this.props.cartridge}.js`;
+    const { cartridge } = this.props;
+    window.cartridge = `/pico8/${cartridge}.js`;
     const pico8js = document.createElement('script');
     pico8js.type = 'text/javascript';
     pico8js.src = '/pico8/pico8.js';
+    pico8js.onload = () => {
+      var start = document.getElementById('p8_start_button');
+      start.style.background = `url(/pico8/${cartridge}.png)`;
+      start.style.backgroundSize = '100%';
+    };
     document.body.appendChild(pico8js);
   }
 
@@ -44,16 +50,14 @@ class Pico8GameShell extends PureComponent {
    * @returns {node}
    */
   render () {
-    const { fullscreen, cartridge } = this.props;
+    const { mobile } = this.props;
+    const html = mobile ? pico8Mobile : pico8Browser;
 
     return (
       <div className={styles.container}>
-        <div className={styles.coverContainer}>
-          <img className={styles.cover} src={`/pico8/${cartridge}.png`} />
-        </div>
         <div
-          className={classnames(styles.p8container, { [styles.fullscreen]: fullscreen })}
-          dangerouslySetInnerHTML={{ __html: pico8HTML }}
+          className={styles.p8container}
+          dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
     );
@@ -62,7 +66,7 @@ class Pico8GameShell extends PureComponent {
 
 Pico8GameShell.propTypes = {
   cartridge: PropTypes.string,
-  fullscreen: PropTypes.bool
+  mobile: PropTypes.bool
 };
 
 export default Pico8GameShell;
