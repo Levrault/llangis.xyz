@@ -1,5 +1,5 @@
 import React from 'react';
-import Pico8FullScreen from '../components/pico8player/pico8fullscreen';
+import Pico8GameShell from '../components/pico8player/pico8gameshell';
 
 /**
  * Index page
@@ -7,9 +7,7 @@ import Pico8FullScreen from '../components/pico8player/pico8fullscreen';
  * @param {array} edges
  */
 const Pico8Reader = () => {
-  return (
-    <Pico8FullScreen />
-  );
+  return <Pico8GameShell mobile cartridge="sieur-lacassagne-dungeon" />;
 };
 
 export default Pico8Reader;

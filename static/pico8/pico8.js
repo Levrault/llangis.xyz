@@ -239,26 +239,26 @@ function p8_update_layout() {
     p8_is_running &&
     document.body.clientWidth < document.body.clientHeight
   ) {
-    p8_playarea.style.marginTop = 32
+    p8_playarea.style.marginTop = '32px'
   } else if (p8_touch_detected && p8_is_running) {
-    p8_playarea.style.marginTop = (document.body.clientHeight - csize) / 4
+    p8_playarea.style.marginTop = (document.body.clientHeight - csize) / 4 + 'px'
   } else {
     p8_playarea.style.marginTop = ''
   }
 
-  canvas.style.width = csize
-  canvas.style.height = csize
+  canvas.style.width = csize + 'px'
+  canvas.style.height = csize + 'px'
 
   // to do: this should just happen from css layout
-  canvas.style.marginLeft = margin_left
-  canvas.style.marginTop = margin_top
+  canvas.style.marginLeft = margin_left + 'px'
+  canvas.style.marginTop = margin_top + 'px'
 
-  p8_container.style.width = csize
-  p8_container.style.height = csize
+  p8_container.style.width = csize + 'px'
+  p8_container.style.height = csize + 'px'
 
   // set menu buttons position to bottom right
   el = document.getElementById('menu_buttons')
-  el.style.marginTop = csize - el.offsetHeight
+  el.style.marginTop = csize - el.offsetHeight + 'px'
 
   if (p8_touch_detected && p8_is_running) {
     // turn off pointer events to prevent double-tap zoom etc (works on Android)
