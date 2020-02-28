@@ -57,23 +57,29 @@ Alright, now that we all know how ratio works, how it's gonna be applied with th
 >
 > *320x180 and 640x360 are the safest.*
 
-### Configure Godot
+### Configure Godot (non pixel-perfect)
 
 So, now that the perfect native resolution has been chosen, it's time to open Godot. Open *Project Settings > Display > Window*. 
 
-- Set 480 for the width, 270 for the height
+- Set 480 for the width, 270 for the height 
 - Activate the Resizable option
 - Set a test width and height, I choose 960x540 (it's the native resolution multiplied by 2). But you can change by whatever resolution you want, it just needs to respect the 16:9 aspect ratio.
-- Set Stretch > Mode to 2d
+- Set Stretch, this is where it can be confusing. To support more resolution and rotating pixel I use Mode **2D** but for a real pixel-perfect rendering, **Viewport** should be use.
 - Set Stretch > Aspect to keep
 
 ![configure aspect ratio and resolution](./aspect_ration.png)
 
-It's almost over, we just need to activate the *Use Pixel Snap* options. You will find it in *Rendering > Quality > 2D > Use Pixel Snap*.
+
+
+# How about half-pixel rendering ?
+
+Yop don't worry, we just need to activate the *Use Pixel Snap* options. You will find it in *Rendering > Quality > 2D > Use Pixel Snap*.
 
 ![pixel snap](./pixel_snap.png)
 
 A quick definition for pixel snap would certainly be *"it forbid half pixel rendering"*. Let just say that if your X axes sprite coordinate is 0.5, the engine will render only the half of a pixel and it will break your wonderful pixel sprite. It's also prevents some images distortion when a sprite is rotated.
+
+
 
 ## How to import pixel art ?
 
