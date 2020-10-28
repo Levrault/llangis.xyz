@@ -74,7 +74,7 @@ The hardest challenge was to create a game easy enough for a 5 years old with no
 
 My main concept was that each level should give a little bit challenge and some replay value. My solution was to let the player collect some gems and also three hidden letters (M-A-X). I knew that Maximilien wouldn't find everything in the first session and I through it would be rewarding for him to find multiples kinds of treasures. I was right, it has tickle is sense of exploration and he feels more rewarded when he collects both gems and treasures.
 
-![image-20201028131731237](/home/luc/Devs/llangis.xyz/src/pages/post/maximilien-adventure-post-mortem/level.png)
+![Level 1 overview](./level.png)
 
 
 
@@ -92,7 +92,7 @@ But sometimes, life can be hard and Max could achieve a game over by loosing a l
 
 I really thought that I wouldn't have the time to do it but I did it. Nothing more to say about that. It's just a simple state machine that make the monster follow the player with a little "mise en scène".
 
-![image-20201028131649043](/home/luc/Devs/llangis.xyz/src/pages/post/maximilien-adventure-post-mortem/boss_level.png)
+![Boss level overview](./boss_level.png)
 
 ### Art
 
@@ -104,11 +104,11 @@ Using the [open pixel project](https://www.openpixelproject.com/) was the best c
 
 Maximilien has a little sister (3y) and she seems a bit jealous. She is a little bit too young to have her first game but the development of Margot-Béatrice adventure has started. 
 
-![margot-beatrice adventure](/home/luc/Devs/llangis.xyz/src/pages/post/maximilien-adventure-post-mortem/margot-beatrice-adventure.png)
+![margot-beatrice adventure](./margot-beatrice-adventure.png)
 
 But since I got 2 years, I really take my time. So much time that I decide to create some useful tools to improve my development workflow. 
 
 - A [starter pack](https://github.com/Levrault/Levrault-s-2D-platformer-starter), to quickly create a new project
 - My own [dialogue editor](https://github.com/Levrault/levrault-dialogue-editor)
 
-![levrault dialogue editor](/home/luc/Devs/llangis.xyz/src/pages/post/maximilien-adventure-post-mortem/dialogue_editor.png)
+![levrault dialogue editor](./dialogue_editor.png)
