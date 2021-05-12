@@ -27,7 +27,7 @@
     "gatsby-transformer-sharp": "^2.3.2",
     "install": "^0.13.0",
     "npm": "^6.12.1",
-    "postcss": "^7.0.21",
+    "postcss": "^8.2.10",
     "prismjs": "^1.17.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
